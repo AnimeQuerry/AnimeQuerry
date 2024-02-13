@@ -1,5 +1,5 @@
 {
-    "nameDatabase":{
+    "nameDatabase": {
         "BNHA": 1,
         "Boku No Hero Academia": 1,
         "Boku No Hero Academia 1": 1,
@@ -23,6 +23,12 @@
         "The Foolish Angel Dances with Demons, Kanaten": 6,
         "The Foolish Angel Dances with the Devil": 6,
 
+        "Dosanko Gal wa Namara Menkoi": 7,
+        "Dosanko Gyaru Is Mega Cute": 7,
+        "Hokkaido Gals Are Super Adorable!": 7,
+
+        "Ansatsu Kyoushitsu: 365-nichi no Jikan": 8,
+
         "": -1
     },
     "idDatabase": {
@@ -38,17 +44,25 @@
             "Boku no Hero Academia 3rd Seasson",
             "AnimeFLV: https://www3.animeflv.net/anime/boku-no-hero-academia-3rd-season"
         ],
-        "4":[
+        "4": [
             "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
             "AnimeFLV: https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen"
         ],
-        "5":[
+        "5": [
             "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
             "AnimeFLV: https://www3.animeflv.net/anime/isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu"
         ],
-        "6":[
+        "6": [
             "The Foolish Angel Dances with the Devil",
             "AnimeFLV: https://www3.animeflv.net/anime/oroka-na-tenshi-wa-akuma-to-odoru"
+        ],
+        "7": [
+            "Hokkaido Gals Are Super Adorable!",
+            "AnimeFLV: https://www3.animeflv.net/anime/dosanko-gal-wa-namara-menkoi"
+        ],
+        "8": [
+            "Ansatsu Kyoushitsu: 365-nichi no Jikan",
+            "OtakusTV: https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan/pelicula"
         ]
     }
 }
