@@ -12,7 +12,7 @@
     <h1>AnimeQuerry</h1>
   </header>
   <main>
-    <input type="text" name="search" id="searchInput" placeholder="Buscar anime...">
+    <input type="text" name="search" oninput="FindByName(this.value)" placeholder="Buscar anime...">
     <p id="commentary"></p>
     <ul id="suggested"></ul>
   </main>
