@@ -18,7 +18,11 @@
         
         "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu": 5,
         "I'm Doing My Best to Make Myself at Home in Another World, Mofunade": 5,
-    
+        
+        "Oroka na Tenshi wa Akuma to Odoru": 6,
+        "The Foolish Angel Dances with Demons, Kanaten": 6,
+        "The Foolish Angel Dances with the Devil": 6,
+
         "": -1
     },
     "idDatabase": {
@@ -41,6 +45,10 @@
         "5":[
             "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
             "AnimeFLV: https://www3.animeflv.net/anime/isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu"
+        ],
+        "6":[
+            "The Foolish Angel Dances with the Devil",
+            "AnimeFLV: https://www3.animeflv.net/anime/oroka-na-tenshi-wa-akuma-to-odoru"
         ]
     }
 }
