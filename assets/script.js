@@ -2,7 +2,7 @@ var database = null;
 var idDatabase = null;
 var nameDatabase = null;
 $(document).ready(function() {
-    $.getJSON('index.json', function(data) {
+    $.getJSON('database.json', function(data) {
         database = data;
         idDatabase = data.idDatabase;
         nameDatabase = data.nameDatabase;
