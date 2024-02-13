@@ -1,18 +1,12 @@
 var database = null;
-var idDatabase = null;
-var nameDatabase = null;
 $(document).ready(function() {
-    $.getJSON('database.json', function(data) {
+    $.getJSON('./assets/database.json', function(data) {
         database = data;
-        idDatabase = data.idDatabase;
-        nameDatabase = data.nameDatabase;
         print()
     })
 });
 function print(){
     console.log(database);
-    console.log(idDatabase);
-    console.log(nameDatabase);
 }
 function FindAssignedName(id){
     return idDatabase[id][0];
@@ -49,14 +43,24 @@ function FindByName(name){
     
     var splits = name.split(" ").filter(function(segment) {return segment !== "";});
     name = splits.join(" ");
-    for (var realKey in nameDatabase) {
-        var id = nameDatabase[realKey];
-        var key = realKey.toLowerCase();
-        if(key.includes(name)){
-            var li = `<li onclick='alternateLinksDisplay(${id})'>${FindAssignedName(id)}</li>`;
-            if(!document.getElementById("suggested").innerText.includes(FindAssignedName(id))){
-                document.getElementById("suggested").innerHTML += li;
-                FindUrls(id);
+    for (var itemID in database) {
+        var item = database[itemID]
+        var id = item["id"]
+        var titles = []
+        var titleID = 0;
+        titles[titleID] = item["title"]
+        for (var title in item["alternativeTitles"]) {
+            titleID++;
+            titles[titleID] = item["alternativeTitles"][title];
+        }
+        for (var title in item["alternativeTitles"]) {
+            var key = title.toLowerCase();
+            if(key.includes(name)){
+                var li = `<li onclick='alternateLinksDisplay(${id})'>${item["title"]}</li>`;
+                if(!document.getElementById("suggested").innerText.includes(item["title"])){
+                    document.getElementById("suggested").innerHTML += li;
+                    FindUrls(id);
+                }
             }
         }
     }

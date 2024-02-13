@@ -8,6 +8,7 @@
             "Boku No Hero Academia 1st Season"
         ],
         "type": "Anime",
+        "tags": [],
         "links": [
             {
                 "source": "AnimeFLV",
@@ -24,6 +25,7 @@
             "Boku No Hero Academia 2nd Season"
         ],
         "type": "Anime",
+        "tags": [],
         "links": [
             {
                 "source": "AnimeFLV",
@@ -40,6 +42,7 @@
             "Boku No Hero Academia 3rd Season"
         ],
         "type": "Anime",
+        "tags": [],
         "links": [
             {
                 "source": "AnimeFLV",
@@ -54,6 +57,7 @@
             "Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen"
         ],
         "type": "Anime",
+        "tags": [],
         "links": [
             {
                 "source": "AnimeFLV",
@@ -68,6 +72,7 @@
             "I'm Doing My Best to Make Myself at Home in Another World, Mofunade"
         ],
         "type": "Anime",
+        "tags": [],
         "links": [
             {
                 "source": "AnimeFLV",
@@ -83,6 +88,7 @@
             "The Foolish Angel Dances with Demons, Kanaten"
         ],
         "type": "Anime",
+        "tags": [],
         "links": [
             {
                 "source": "AnimeFLV",
@@ -97,6 +103,11 @@
             "Dosanko Gal wa Namara Menkoi"
         ],
         "type": "Anime",
+        "tags": [
+            "Comedia",
+            "Escolares",
+            "Romance"
+        ],
         "links": [
             {
                 "source": "AnimeFLV",
@@ -107,10 +118,9 @@
     {
         "id": 8,
         "title": "Ansatsu Kyoushitsu: 365-nichi no Jikan",
-        "alternativeTitles": [
-
-        ],
+        "alternativeTitles": [],
         "type": "Film",
+        "tags": [],
         "links": [
             {
                 "source": "OtakusTV",
