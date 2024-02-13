@@ -14,6 +14,9 @@ var nameDatabase = {
     
     "Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen": 4,
     "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord": 4,
+    
+    "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu": 5,
+    "I'm Doing My Best to Make Myself at Home in Another World, Mofunade": 5,
 
     "": -1
 }
@@ -33,6 +36,10 @@ var idDatabase = {
     4:[
         "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
         "AnimeFLV: https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen"
+    ],
+    5:[
+        "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
+        "AnimeFLV: https://www3.animeflv.net/anime/isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu"
     ]
 }
 function FindAssignedName(id){
