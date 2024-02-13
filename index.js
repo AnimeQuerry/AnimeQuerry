@@ -1,8 +1,11 @@
+var database = null;
 $(document).ready(function() {
     $.getJSON('index.json', function(data) {
-        console.log(data);
+        database = data;
     })
 });
+var idDatabase = database.idDatabase;
+var nameDatabase = database.nameDatabase;
 function FindAssignedName(id){
     return idDatabase[id][0];
 }
