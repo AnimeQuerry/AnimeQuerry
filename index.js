@@ -1,12 +1,19 @@
 var database = null;
+var idDatabase = null;
+var nameDatabase = null;
 $(document).ready(function() {
     $.getJSON('index.json', function(data) {
         database = data;
+        idDatabase = data.idDatabase;
+        nameDatabase = data.nameDatabase;
+        print()
     })
 });
-console.log(database);
-var idDatabase = database.idDatabase;
-var nameDatabase = database.nameDatabase;
+function print(){
+    console.log(database);
+    console.log(idDatabase);
+    console.log(nameDatabase);
+}
 function FindAssignedName(id){
     return idDatabase[id][0];
 }
