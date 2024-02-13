@@ -4,6 +4,7 @@ $(document).ready(function() {
         database = data;
     })
 });
+console.log(database);
 var idDatabase = database.idDatabase;
 var nameDatabase = database.nameDatabase;
 function FindAssignedName(id){
