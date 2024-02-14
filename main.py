@@ -8,6 +8,7 @@ def verify(json_data):
             "title": item.get("title", ""),
             "alternativeTitles": item.get("alternativeTitles", []),
             "type": item.get("type", ""),
+            "types": item.get("types", []),
             "tags": item.get("tags", []),
             "links": item.get("links", [])
         }
