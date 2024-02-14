@@ -95,7 +95,6 @@ function changeFilter(button) {
 }
 function FindByName(name){
     document.getElementById(`searchByName`).value = name;
-    document.getElementById("container").innerHTML = ``;
     name = name.toLowerCase();
     
     var splits = name.split(" ").filter(function(segment) {return segment !== "";});
