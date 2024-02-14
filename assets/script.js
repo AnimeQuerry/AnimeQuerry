@@ -20,8 +20,7 @@ function FindUrls(id){
         var list = ``;
         for (var linkID in database[id]["links"]) {
             var link = database[id]["links"][linkID];
-            list += `<li><a href="${link["url"]}">${link["source"]}</a></li>`
-            }
+            list += `<li><a href="${link["url"]}">${link["source"]}</a></li>`;
         }
         document.getElementById("suggested").innerHTML += `<ul id='ID${id}_links' class='links' style='display:none'">${list}</ul>`;
     }
