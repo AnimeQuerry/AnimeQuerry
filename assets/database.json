@@ -1,103 +1,60 @@
 [
-    {
-        "id": 0,
-        "title": "Tsuki ga Michibiku Isekai Douchuu",
+       { "id":  0, "title": "Tsuki ga Michibiku Isekai Douchuu 1st Season",
         "alternativeTitles": [
             "Tsukimichi -Moonlit Fantasy-",
             "Tsukimichi: Moonlit Fantasy"
         ],
         "type": "Anime",
-        "tags": [
-            "Aventuras",
-            "Fantasia",
-            "Isekai",
-            "Magic"
-        ],
+        "tags": ["Aventuras", "Fantasia","Isekai","Magic"],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu"
-            }
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu" }
         ]
-    },
-    {
-        "id": 1,
-        "title": "Boku No Hero Academia 1st Season",
+    }, { "id":  1, "title": "Boku No Hero Academia 1st Season",
         "alternativeTitles": [
             "Boku No Hero Academia"
         ],
         "type": "Anime",
         "tags": [],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2016"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2016"}
         ]
-    },
-    {
-        "id": 2,
-        "title": "Boku No Hero Academia 2nd Season",
+    }, { "id":  2, "title": "Boku No Hero Academia 2nd Season",
         "alternativeTitles": [
             "Boku No Hero Academia 2"
         ],
         "type": "Anime",
         "tags": [],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2nd-season"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2nd-season"}
         ]
-    },
-    {
-        "id": 3,
-        "title": "Boku No Hero Academia 3rd Season",
+    }, { "id":  3, "title": "Boku No Hero Academia 3rd Season",
         "alternativeTitles": [
             "Boku No Hero Academia 3"
         ],
         "type": "Anime",
         "tags": [],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-3rd-season"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-3rd-season"}
         ]
-    },
-    {
-        "id": 4,
-        "title": "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
+    }, { "id":  4, "title": "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
         "alternativeTitles": [
             "Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen"
         ],
         "type": "Anime",
         "tags": [],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen"}
         ]
-    },
-    {
-        "id": 5,
-        "title": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
+    }, { "id":  5, "title": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
         "alternativeTitles": [
             "I'm Doing My Best to Make Myself at Home in Another World, Mofunade"
         ],
         "type": "Anime",
         "tags": [],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu"}
         ]
-    },
-    {
-        "id": 6,
-        "title": "The Foolish Angel Dances with the Devil",
+    }, { "id":  6, "title": "The Foolish Angel Dances with the Devil",
         "alternativeTitles": [
             "Oroka na Tenshi wa Akuma to Odoru",
             "The Foolish Angel Dances with Demons, Kanaten"
@@ -105,190 +62,99 @@
         "type": "Anime",
         "tags": [],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/oroka-na-tenshi-wa-akuma-to-odoru"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/oroka-na-tenshi-wa-akuma-to-odoru"}
         ]
-    },
-    {
-        "id": 7,
-        "title": "Hokkaido Gals Are Super Adorable!",
+    }, { "id":  7, "title": "Hokkaido Gals Are Super Adorable!",
         "alternativeTitles": [
             "Dosanko Gal wa Namara Menkoi"
         ],
         "type": "Anime",
-        "tags": [
-            "Comedia",
-            "Escolares",
-            "Romance"
-        ],
+        "tags": ["Comedia","Escolares","Romance"],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/dosanko-gal-wa-namara-menkoi"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/dosanko-gal-wa-namara-menkoi"}
         ]
-    },
-    {
-        "id": 8,
-        "title": "Ansatsu Kyoushitsu: 365-nichi no Jikan",
+    }, { "id":  8, "title": "Ansatsu Kyoushitsu: 365-nichi no Jikan",
         "alternativeTitles": [],
         "type": "Film",
         "tags": [],
         "links": [
-            {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan/pelicula"
-            }
+            {"source": "OtakusTV", "url": "https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan/pelicula"}
         ]
-    },
-    {
-        "id": 9,
-        "title": "Jaku-Chara Tomozaki-kun",
+    }, { "id":  9, "title": "Jaku-Chara Tomozaki-kun 1st Season",
         "alternativeTitles": [
             "Jakusha Character Tomozaki-kun, Bottom-tier Character Tomozaki",
             "The Low Tier Character"
         ],
         "type": "Anime",
-        "tags": [
-            "Drama",
-            "Escolares",
-            "Romance"
-        ],
+        "tags": ["Drama","Escolares","Romance"],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun"}
         ]
-    },
-    {
-        "id": 10,
-        "title": "Jaku-Chara Tomozaki-kun 2nd Stage",
+    }, { "id": 10, "title": "Jaku-Chara Tomozaki-kun 2nd Season",
         "alternativeTitles": [
             "Bottom-Tier Character Tomozaki 2nd Stage"
         ],
         "type": "Anime",
-        "tags": [
-            "Drama",
-            "Escolares",
-            "Romance"
-        ],
+        "tags": ["Drama","Escolares","Romance"],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun-2nd-stage"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun-2nd-stage"}
         ]
-    },
-    {
-        "id": 11,
-        "title": "Ishura",
+    }, { "id": 11, "title": "Ishura",
         "alternativeTitles": [],
         "type": "Anime",
-        "tags": [
-            "Accion",
-            "Aventuras",
-            "Fantasia"
-        ],
+        "tags": ["Accion","Aventuras","Fantasia"],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/ishura"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/ishura"}
         ]
-    },
-    {
-        "id": 12,
-        "title": "Gekai Elise",
+    }, { "id": 12, "title": "Gekai Elise",
         "alternativeTitles": [
             "Oegwauisa Elise, Doctor Elise: Queen with a Scalpel, Surgeon Elise",
             "Doctor Elise: The Royal Lady with the Lamp"
         ],
         "type": "Anime",
-        "tags": [
-            "Comedia",
-            "Fantasia",
-            "Romance",
-            "Isekai"
-        ],
+        "tags": ["Comedia","Fantasia","Romance","Isekai"],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/gekai-elise"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/gekai-elise"}
         ]
-    },
-    {
-        "id": 13,
-        "title": "Himesama \"Goumon\" no Jikan desu",
+    }, { "id": 13, "title": "Himesama \"Goumon\" no Jikan desu",
         "alternativeTitles": [
             "It's Time for \"Interrogation\", Princess!, Hime-sama \"Goumon\" no Jikan desu",
             "'Tis Time for \"Torture\", Princess"
         ],
         "type": "Anime",
-        "tags": [
-            "Comedia",
-            "Fantasia",
-            "Shounen"
-        ],
+        "tags": ["Comedia","Fantasia","Shounen"],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/himesama-goumon-no-jikan-desu"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/himesama-goumon-no-jikan-desu"}
         ]
-    },
-    {
-        "id": 14,
-        "title": "Kyuujitsu no Warumono-san",
+    }, { "id": 14, "title": "Kyuujitsu no Warumono-san",
         "alternativeTitles": [
             "Mr. Villain's Day Off"
         ],
         "type": "Anime",
-        "tags": [
-            "Comedia"
-        ],
+        "tags": ["Comedia"],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/kyuujitsu-no-warumonosan"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/kyuujitsu-no-warumonosan"}
         ]
-    },
-    {
-        "id": 15, "title": "Classroom of the Elite 1st Season",
+    }, { "id": 15, "title": "Classroom of the Elite 1st Season",
         "alternativeTitles": [
             "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e"
         ],
         "type": "Anime",
         "tags": [ "Comedia", "Escolares", "Romance" ],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv"}
         ]
-    },
-    {
-        "id": 16, "title": "Classroom of the Elite 2nd Season",
+    }, { "id": 16, "title": "Classroom of the Elite 2nd Season",
         "alternativeTitles": [
             "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 2nd Season",
             "Classroom of the Elite II, You-zitsu"
-            
         ],
         "type": "Anime",
         "tags": [ "Drama", "Escolares", "Psicologico", "Suspenso" ],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv-2nd-season"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv-2nd-season"}
         ]
-    },
-    {
-        "id": 17, "title": "Classroom of the Elite 3rd Season",
+    }, { "id": 17, "title": "Classroom of the Elite 3rd Season",
         "alternativeTitles": [
             "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season",
             "Welcome to the Classroom of the Elite, You-jitsu 3rd Season, You-zitsu 3rd Season"
@@ -296,10 +162,41 @@
         "type": "Anime",
         "tags": [ "Drama", "Escolares", "Psicologico", "Suspenso" ],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season"
-            }
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season"}
         ]
+    }, { "id": 18, "title": "Tsuki ga Michibiku Isekai Douchuu 2nd Season",
+        "alternativeTitles": [
+            "Tsukimichi -Moonlit Fantasy- Season 2"
+        ],
+        "type": "Anime",
+        "tags": ["Accion","Aventuras","Comedia","Fantasia","Isekai"],
+        "links": [
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu-2nd-season"}
+        ]
+    }, { "id": 19, "title": "Beyblade X",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": ["Aventuras","Accion","Deportes"],
+        "links": [
+            {"source": "OtakusTV", "url": "https://www1.otakustv.com/anime/beyblade-x"}
+        ]
+    }, { "id": 20, "title": "Sengoku Youko",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": ["Accion","Aventuras","Drama","Fantasia","Shounen"],
+        "links": [
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/sengoku-youko"}
+        ]
+    }, { "id": 21, "title": "Mahou Shoujo ni Akogarete",
+        "alternativeTitles": [
+            "Gushing over Magical Girls",
+            "Looking up to Magical Girls, I Admire Magical Girls, and..."
+        ],
+        "type": "Anime",
+        "tags": ["Accion","Comedia","Ecchi","Fantasia"],
+        "links": [
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/mahou-shoujo-ni-akogarete"}
+        ]
+    }, { "id": null, "title": "x", "alternativeTitles": [],"type": "","tags": [],"links": [{"source": "", "url": ""}]
     }
 ]

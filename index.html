@@ -4,30 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnimeQuerry</title>
-  <link rel="stylesheet" href="./assets/style.css"> <!-- Enlace a tu archivo CSS -->
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/style.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
   <header>
-    <h1>AnimeQuerry</h1>
+    <div id="left-col" class="col">
+    </div>
+    <h1 id="title">AnimeQuerry</h1>
+    <div id="right-col" class="col">
+      <button onclick="getRandom()">Random</button>
+    </div>
   </header>
   <main>
     <nav>
-      <input type="text" id="searchByName" name="search" oninput="FindByName(this.value)" placeholder="Buscar anime...">
+      <input type="text"    id="searchByName" name="search" oninput="FindByName(this.value)" placeholder="Buscar anime...">
+      <input type="button"  id="filter-button" value="Filter" onclick="alternameFilterOptions()">
+    
+      <div id="searchTags" style="display: none;">
+        <p class="title">Tipo: </p>
+        <button name="type-anime" class="inactive-type" onclick="changeFilter(this)">Anime</button>
+        <button name="type-film" class="inactive-type" onclick="changeFilter(this)">Film</button>
+        <button name="type-ova" class="inactive-type" onclick="changeFilter(this)">OVA</button>
+        <button name="type-special" class="inactive-type" onclick="changeFilter(this)">Special</button>
+        <p class="title">Etiquetas: <button class="tag-mode-some" onclick="changeFilter(this)">Modo limitado</button></p>
+        <button name="tag-isekai" class="inactive-tag" onclick="changeFilter(this)">Isekai</button>
+        <button name="tag-comedia" class="inactive-tag" onclick="changeFilter(this)">Comedia</button>
+        <button name="tag-fantasia" class="inactive-tag" onclick="changeFilter(this)">Fantasia</button>
+        <button name="tag-escolares" class="inactive-tag" onclick="changeFilter(this)">Escolares</button>
+        <button name="tag-romance" class="inactive-tag" onclick="changeFilter(this)">Romance</button>
+        <button name="tag-shounen" class="inactive-tag" onclick="changeFilter(this)">Shounen</button>
+        <button name="tag-ecchi" class="inactive-tag" onclick="changeFilter(this)">Ecchi</button>
+        <button name="tag-aventuras" class="inactive-tag" onclick="changeFilter(this)">Aventuras</button>
+        <button name="tag-accion" class="inactive-tag" onclick="changeFilter(this)">Accion</button>
+      </div>
     </nav>
-    <div name="searchTags" multiple style="display: none;">
-      <input type="button" value="Filter">
-      <p class="title">Type</p>
-      <p><input type="checkbox" name="s" id="">Anime</p>
-      <p><input type="checkbox" name="s" id="">Film</p>
-      <p><input type="checkbox" name="s" id="">OVA</p>
-      <p><input type="checkbox" name="s" id="">Special</p>
-      <p class="title">Tag</p>
-      <p><input type="checkbox" name="s" id="">Isekai</p>
-      <p class="title">Status</p>
-      <p><input type="checkbox" name="s" id="">Finalizado</p>
-      <p><input type="checkbox" name="s" id="">En Emision</p>
-    </div>
     <p id="commentary"></p>
     <div id="container"></div>
   </main>

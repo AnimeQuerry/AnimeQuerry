@@ -13,33 +13,73 @@ header {
     color: #fff;
     padding: 16px;
     text-align: center;
-  }
-  
-  main {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+header .col{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+header #left-col{justify-content: flex-start;}
+header #right-col{
+    justify-content: flex-end;
+}
+header #title{
+    width: 100%;
+}
+main {
+    min-height: calc(100vh - 135px);
     padding: 8px;
-  }
-  
-  input[type="text"] {
-    width: calc(100% - 38px);
-    padding: 10px;
+}
+nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav #filter-button{
+  width: 64px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 8px;
+}
+nav #searchByName {
+    width: calc(100% - 114px);
+    padding: 8px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin: 8px;
   }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+#searchTags{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px;
+}
+#searchTags p{
+  width: 100%;
+}
+#searchTags button{
+  width: fit-content;
+  padding: 4px;
+  border-radius: 8px;
+}
   
   footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 16px;
-    position: sticky;
-    bottom: 0;
     width: calc(100% - 32px);
   }
 mark {
@@ -50,7 +90,7 @@ mark {
 }
 #container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
   margin: 8px;
   flex-wrap: wrap;
@@ -72,7 +112,7 @@ mark {
   padding-bottom: 8px;
 }
 .item img {
-  max-width: calc(100% / 4);
+  max-width: calc(100% / 2);
   width: 179px;
   height: 256px;
 }
@@ -94,12 +134,25 @@ mark {
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .item .see-more button,
 .item .tags button {
   text-decoration: none;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+/* css global class*/
+.normal-tag {
   background-color: rgb(128, 192, 255);
   border: 1px solid hsl(210, 100%, 25%);
-  padding: inherit;
-  border-radius: 8px;
+}
+.active-tag, .active-type {
+  background-color: rgb(192, 255, 128);
+  border: 1px solid hsl(90, 100%, 25%);
+}
+.inactive-tag, .inactive-type {
+  background-color: rgb(192, 192, 192);
+  border: 1px solid hsl(0, 0%, 25%);
 }
