@@ -1,5 +1,17 @@
 [
     {
+        "id": 0,
+        "title": "Tsuki ga Michibiku Isekai Douchuu",
+        "alternativeTitles": [
+            "Tsukimichi -Moonlit Fantasy-",
+            "Tsukimichi: Moonlit Fantasy"
+        ],
+        "type": "Anime",
+        "tags": [ "Aventuras", "Fantasía", "Isekai", "Magic"],
+        "links": [
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu", "lang": "JAP (Sub ESP)" }
+        ]
+    },{
         "id": 1,
         "title": "Boku No Hero Academia",
         "alternativeTitles": [
@@ -10,10 +22,7 @@
         "type": "Anime",
         "tags": [],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2016"
-            }
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2016", "lang": "JAP (Sub ESP)" }
         ]
     },
     {
@@ -27,10 +36,7 @@
         "type": "Anime",
         "tags": [],
         "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2nd-season"
-            }
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2nd-season", "lang": "JAP (Sub ESP)" }
         ]
     },
     {
