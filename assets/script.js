@@ -18,6 +18,7 @@ function FindUrls(id){
     } else {
         document.getElementById("commentary").innerText = ``;
         var list = ``;
+        console.log(database[id])
         for (var linkID in database[id]["links"]) {
             var link = database[id]["links"][linkID];
             list += `<li><a href="${link["url"]}">${link["source"]}</a></li>`;
