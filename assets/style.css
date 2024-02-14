@@ -21,6 +21,7 @@ header .col{
     display: flex;
     flex-direction: row;
     gap: 16px;
+    width: 25%;
 }
 header #left-col{justify-content: flex-start;}
 header #right-col{
@@ -63,11 +64,14 @@ nav #searchByName {
   margin: 8px;
   border: 1px solid black;
   border-radius: 8px;
-  width: 100%;
+  width: calc(100% - 34px);
   padding: 8px;
+  justify-content: center;
 }
 #searchTags p{
   width: 100%;
+  text-align: center;
+  font-weight: bold;
 }
 #searchTags button{
   width: fit-content;
@@ -94,6 +98,7 @@ mark {
   gap: 8px;
   margin: 8px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .item {
   border: 1px solid hsl(0, 0%, 80%);
@@ -101,20 +106,18 @@ mark {
   overflow: hidden;
   border-radius: 8px;
   display: flex;
-  width: 100%;
   flex-direction: row;
 }
 .item .data {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding-bottom: 8px;
+  width: calc(100% - 179px);
 }
 .item img {
-  max-width: calc(100% / 2);
   width: 179px;
-  height: 256px;
+  height: auto;
 }
 .item .itemTitle {
   background-color: #ccc;
@@ -126,6 +129,11 @@ mark {
 }
 .item .alternativeTitles {
   padding: 0 8px;
+}
+.item .alternativeTitles p{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .item .see-more,
 .item .tags {
@@ -156,3 +164,7 @@ mark {
   background-color: rgb(192, 192, 192);
   border: 1px solid hsl(0, 0%, 25%);
 }
+@media screen and (min-width:  256px) { .item { width: calc(100% / 1 - 1px);} }
+@media screen and (min-width:  768px) { .item { width: calc(100% / 2 - 6px);} }
+@media screen and (min-width: 1280px) { .item { width: calc(100% / 3 - 8px);} }
+@media screen and (min-width: 1792px) { .item { width: calc(100% / 4 - 8px);} }

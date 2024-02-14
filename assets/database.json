@@ -197,6 +197,24 @@
         "links": [
             {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/mahou-shoujo-ni-akogarete"}
         ]
+    }, { "id": 22, "title": "30-sai made Doutei dato Mahoutsukai ni Nareru Rashii", 
+        "alternativeTitles": [
+            "Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!"
+        ],
+        "type": "Anime",
+        "tags": ["Comedia","Sobrenatural","Yaoi"],
+        "links": [
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/30sai-made-doutei-dato-mahoutsukai-ni-nareru-rashii"}
+        ]
+    }, { "id": 23, "title": "Metallic Rouge", 
+        "alternativeTitles": [
+
+        ],
+        "type": "Anime",
+        "tags": ["Accion", "Ciencia Ficcion"],
+        "links": [
+            {"source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/metallic-rouge"}
+        ]
     }, { "id": null, "title": "x", "alternativeTitles": [],"type": "","tags": [],"links": [{"source": "", "url": ""}]
     }
 ]

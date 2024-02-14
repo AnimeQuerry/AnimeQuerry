@@ -11,14 +11,14 @@ $(document).ready(function() {
         database_ASC.sort(function(a, b) { return a.title.localeCompare(b.title); });
         database_DESC = data.slice();
         database_DESC.sort(function(a, b) { return b.title.localeCompare(a.title); });
-        document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length} animes...`);
-        FindByName("")
-        console.log(database_ASC)
+        document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length-1} animes...`);
+        console.log(database);
+        FindByName("");
     })
 });
 function alternameFilterOptions(){
     if(document.getElementById(`searchTags`).style.display === "none"){
-        document.getElementById(`searchTags`).style.display = "flex";
+        document.getElementById(`searchTags`).style.display = "";
     }else{
         document.getElementById(`searchTags`).style.display = "none";
     }
@@ -31,21 +31,18 @@ function getRandom(){
 function go(link){
     window.location = link;
 }
-function print(){
-    console.log(database);
-}
 function FindTags(id){
     if(search_type.includes(`type-${database[id]["type"].toLowerCase()}`)){
-        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button class='active-tag'>${database[id]["type"]}</button>`;
+        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="type-${database[id]["type"].toLowerCase()}" class='active-type' onclick="changeFilter(this)">${database[id]["type"]}</button>`;
     }else{
-        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button class='normal-tag'>${database[id]["type"]}</button>`;
+        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="type-${database[id]["type"].toLowerCase()}" class='inactive-type' onclick="changeFilter(this)">${database[id]["type"]}</button>`;
     }
     for (var tagID in database[id]["tags"]) {
         var tag = database[id]["tags"][tagID];
-        if(search_tags.includes(`tag-${tag.toLowerCase()}`)){
-            document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button class='active-tag'>${tag}</button>`;
+        if(search_tags.includes(`tag-${tag.toLowerCase().replaceAll(' ', '-')}`)){
+            document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='active-tag' onclick="changeFilter(this)">${tag}</button>`;
         }else{
-            document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button class='normal-tag'>${tag}</button>`;
+            document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='inactive-tag' onclick="changeFilter(this)">${tag}</button>`;
         }
     }
 }
@@ -64,26 +61,35 @@ function changeFilter(button) {
     }else if(button.getAttribute("class") === "tag-mode-some"){
         button.classList.remove("tag-mode-some");
         button.classList.add("tag-mode-all");
+
         button.innerText = "Modo completo";
         search_tag_mode = "all";
     }else if(button.getAttribute("class") === "active-tag"){
         button.classList.remove("active-tag");
         button.classList.add("inactive-tag");
+        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("active-tag");
+        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.add("inactive-tag");
         search_tags.splice(search_tags.indexOf(button.getAttribute("name")),1);
     }else if(button.getAttribute("class") === "inactive-tag"){
         button.classList.remove("inactive-tag");
         button.classList.add("active-tag");
+        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("inactive-tag");
+        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.add("active-tag");
         search_tags.push(button.getAttribute("name"));
     }else if(button.getAttribute("class") === "active-type"){
         button.classList.remove("active-type");
         button.classList.add("inactive-type");
+        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.remove("active-type");
+        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.add("inactive-type");
+
         search_type.splice(search_type.indexOf(button.getAttribute("name")),1);
     }else if(button.getAttribute("class") === "inactive-type"){
         button.classList.remove("inactive-type");
         button.classList.add("active-type");
+        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.remove("inactive-type");
+        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.add("active-type");
         search_type.push(button.getAttribute("name"));
     }
-    console.log(search_tags,search_type)
     FindByName(document.getElementById("searchByName").value)
 }
 function FindByName(name){
@@ -96,7 +102,6 @@ function FindByName(name){
     if (name === '') { 
         name = " "; 
     }
-    console.log(name)
     for (var itemID in database_ASC) {
         var item = database_ASC[itemID]
         if(item["id"] === -1) { return; }
@@ -108,12 +113,12 @@ function FindByName(name){
             if(search_tag_mode === "all"){
                 includeTag = search_tags.every(function(tag) {
                     return item["tags"].some(function(itemTag) {
-                        return itemTag.toLowerCase() === tag.split("-")[1].toLowerCase();
+                        return itemTag.toLowerCase() === tag.split("tag-")[1].toLowerCase().replaceAll('-', ' ');
                     });
                 });
             }else{
                 includeTag = item["tags"].some(function(tag) {
-                    return search_tags.includes(`tag-${tag.toLowerCase()}`);
+                    return search_tags.includes(`tag-${tag.toLowerCase().replaceAll(' ', '-')}`);
                 });
             }
             if (

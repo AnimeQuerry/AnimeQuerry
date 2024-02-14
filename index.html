@@ -20,26 +20,30 @@
   <main>
     <nav>
       <input type="text"    id="searchByName" name="search" oninput="FindByName(this.value)" placeholder="Buscar anime...">
-      <input type="button"  id="filter-button" value="Filter" onclick="alternameFilterOptions()">
-    
-      <div id="searchTags" style="display: none;">
-        <p class="title">Tipo: </p>
-        <button name="type-anime" class="inactive-type" onclick="changeFilter(this)">Anime</button>
-        <button name="type-film" class="inactive-type" onclick="changeFilter(this)">Film</button>
-        <button name="type-ova" class="inactive-type" onclick="changeFilter(this)">OVA</button>
-        <button name="type-special" class="inactive-type" onclick="changeFilter(this)">Special</button>
-        <p class="title">Etiquetas: <button class="tag-mode-some" onclick="changeFilter(this)">Modo limitado</button></p>
-        <button name="tag-isekai" class="inactive-tag" onclick="changeFilter(this)">Isekai</button>
-        <button name="tag-comedia" class="inactive-tag" onclick="changeFilter(this)">Comedia</button>
-        <button name="tag-fantasia" class="inactive-tag" onclick="changeFilter(this)">Fantasia</button>
-        <button name="tag-escolares" class="inactive-tag" onclick="changeFilter(this)">Escolares</button>
-        <button name="tag-romance" class="inactive-tag" onclick="changeFilter(this)">Romance</button>
-        <button name="tag-shounen" class="inactive-tag" onclick="changeFilter(this)">Shounen</button>
-        <button name="tag-ecchi" class="inactive-tag" onclick="changeFilter(this)">Ecchi</button>
-        <button name="tag-aventuras" class="inactive-tag" onclick="changeFilter(this)">Aventuras</button>
-        <button name="tag-accion" class="inactive-tag" onclick="changeFilter(this)">Accion</button>
-      </div>
+      <input type="button"  id="filter-button" value="Filtrar" onclick="alternameFilterOptions()">
     </nav>
+    <div id="searchTags" style="display: none;">
+      <p class="title">Tipo: </p>
+      <button name="type-anime" class="inactive-type" onclick="changeFilter(this)">Anime</button>
+      <button name="type-film" class="inactive-type" onclick="changeFilter(this)">Film</button>
+      <button name="type-ova" class="inactive-type" onclick="changeFilter(this)">OVA</button>
+      <button name="type-special" class="inactive-type" onclick="changeFilter(this)">Special</button>
+      <p class="title">Etiquetas: <button class="tag-mode-some" onclick="changeFilter(this)">Modo limitado</button></p>
+      <button name="tag-isekai" class="inactive-tag" onclick="changeFilter(this)">Isekai</button>
+      <button name="tag-comedia" class="inactive-tag" onclick="changeFilter(this)">Comedia</button>
+      <button name="tag-fantasia" class="inactive-tag" onclick="changeFilter(this)">Fantasia</button>
+      <button name="tag-escolares" class="inactive-tag" onclick="changeFilter(this)">Escolares</button>
+      <button name="tag-romance" class="inactive-tag" onclick="changeFilter(this)">Romance</button>
+      <button name="tag-shounen" class="inactive-tag" onclick="changeFilter(this)">Shounen</button>
+      <button name="tag-ecchi" class="inactive-tag" onclick="changeFilter(this)">Ecchi</button>
+      <button name="tag-aventuras" class="inactive-tag" onclick="changeFilter(this)">Aventuras</button>
+      <button name="tag-accion" class="inactive-tag" onclick="changeFilter(this)">Accion</button>
+      <button name="tag-sobrenatural" class="inactive-tag" onclick="changeFilter(this)">Sobrenatural</button>
+      <button name="tag-yaoi" class="inactive-tag" onclick="changeFilter(this)">Yaoi</button>
+      <button name="tag-yuri" class="inactive-tag" onclick="changeFilter(this)">Yuri</button>
+      <button name="tag-drama" class="inactive-tag" onclick="changeFilter(this)">Drama</button>
+      <button name="tag-ciencia-ficcion" class="inactive-tag" onclick="changeFilter(this)">Ciencia Ficcion</button>
+    </div>
     <p id="commentary"></p>
     <div id="container"></div>
   </main>
