@@ -12,8 +12,7 @@ $(document).ready(function() {
         database_DESC = data.slice();
         database_DESC.sort(function(a, b) { return b.title.localeCompare(a.title); });
         document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length-1} animes...`);
-        console.log(database);
-        FindByName("");
+        FindByName(" ");
     })
 });
 function alternameFilterOptions(){
