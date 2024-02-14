@@ -8,7 +8,8 @@ $(document).ready(function() {
         database_ASC.sort(function(a, b) { return a.title.localeCompare(b.title); });
         database_DESC = data.slice();
         database_DESC.sort(function(a, b) { return b.title.localeCompare(a.title); });
-        FindByName("s")
+        document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length} animes...`);
+        FindByName(" ")
         console.log(database_ASC)
     })
 });
@@ -39,17 +40,34 @@ function alternateLinksDisplay(id){
         document.getElementById(`ID${id}_links`).style.display = "none";
     }
 }
+function changeSearchFilter(){
+    window.location += `?type=a`
+}
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var filterType = getParameterByName('type');
 
 function FindByName(name){
     document.getElementById("container").innerHTML = ``;
-    if (name === '') { return; }
     name = name.toLowerCase();
     
     var splits = name.split(" ").filter(function(segment) {return segment !== "";});
     name = splits.join(" ");
-    
+    if (name === '') { 
+        name = " "; 
+    }
+    console.log(name)
     for (var itemID in database_ASC) {
         var item = database_ASC[itemID]
+        if(item["id"] === -1) { return; }
         var id = item["id"]
         var titles = []
         var titleID = 0;
@@ -61,14 +79,12 @@ function FindByName(name){
         for (var title in titles) {
             var key = titles[title].toLowerCase();
             if(key.includes(name)){
-                key = key.replaceAll(name, `<mark>${name}</mark>`)
+                if(name != " "){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
                 var div = `<div id="ID${id}_item" class="item">
                     <img src="./assets/images/ID${id}.png">
                     <div class="data">
                         <p class="itemTitle">${item["title"]}</p>
-                        <div class="tags">
-                        <p>Tags</p>
-                        </div>
+                        <div class="tags"><p>Tags: </p></div>
                         <p class="itemSubTitle">Alternative Titles</p>
                         <div class="alternativeTitles"></div>
                         <p class="itemSubTitle">Sources</p>
@@ -87,4 +103,3 @@ function FindByName(name){
         }
     }
 }
-

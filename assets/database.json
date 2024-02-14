@@ -7,45 +7,54 @@
             "Tsukimichi: Moonlit Fantasy"
         ],
         "type": "Anime",
-        "tags": [ "Aventuras", "Fantasía", "Isekai", "Magic"],
+        "tags": [
+            "Aventuras",
+            "Fantasia",
+            "Isekai",
+            "Magic"
+        ],
         "links": [
-            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu", "lang": "JAP (Sub ESP)" }
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu"
+            }
         ]
-    },{
+    },
+    {
         "id": 1,
-        "title": "Boku No Hero Academia",
+        "title": "Boku No Hero Academia 1st Season",
         "alternativeTitles": [
-            "BNHA",
-            "Boku No Hero Academia 1",
-            "Boku No Hero Academia 1st Season"
+            "Boku No Hero Academia"
         ],
         "type": "Anime",
         "tags": [],
         "links": [
-            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2016", "lang": "JAP (Sub ESP)" }
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2016"
+            }
         ]
     },
     {
         "id": 2,
         "title": "Boku No Hero Academia 2nd Season",
         "alternativeTitles": [
-            "BNHA2",
-            "Boku No Hero Academia 2",
-            "Boku No Hero Academia 2nd Season"
+            "Boku No Hero Academia 2"
         ],
         "type": "Anime",
         "tags": [],
         "links": [
-            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2nd-season", "lang": "JAP (Sub ESP)" }
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2nd-season"
+            }
         ]
     },
     {
         "id": 3,
         "title": "Boku No Hero Academia 3rd Season",
         "alternativeTitles": [
-            "BNHA3",
-            "Boku No Hero Academia 3",
-            "Boku No Hero Academia 3rd Season"
+            "Boku No Hero Academia 3"
         ],
         "type": "Anime",
         "tags": [],
@@ -131,6 +140,165 @@
             {
                 "source": "OtakusTV",
                 "url": "https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan/pelicula"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Jaku-Chara Tomozaki-kun",
+        "alternativeTitles": [
+            "Jakusha Character Tomozaki-kun, Bottom-tier Character Tomozaki",
+            "The Low Tier Character"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Drama",
+            "Escolares",
+            "Romance"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Jaku-Chara Tomozaki-kun 2nd Stage",
+        "alternativeTitles": [
+            "Bottom-Tier Character Tomozaki 2nd Stage"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Drama",
+            "Escolares",
+            "Romance"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun-2nd-stage"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Ishura",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Aventuras",
+            "Fantasia"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ishura"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Gekai Elise",
+        "alternativeTitles": [
+            "Oegwauisa Elise, Doctor Elise: Queen with a Scalpel, Surgeon Elise",
+            "Doctor Elise: The Royal Lady with the Lamp"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Comedia",
+            "Fantasia",
+            "Romance",
+            "Isekai"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/gekai-elise"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Himesama \"Goumon\" no Jikan desu",
+        "alternativeTitles": [
+            "It's Time for \"Interrogation\", Princess!, Hime-sama \"Goumon\" no Jikan desu",
+            "'Tis Time for \"Torture\", Princess"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Comedia",
+            "Fantasia",
+            "Shounen"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/himesama-goumon-no-jikan-desu"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Kyuujitsu no Warumono-san",
+        "alternativeTitles": [
+            "Mr. Villain's Day Off"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Comedia"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/kyuujitsu-no-warumonosan"
+            }
+        ]
+    },
+    {
+        "id": 15, "title": "Classroom of the Elite 1st Season",
+        "alternativeTitles": [
+            "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e"
+        ],
+        "type": "Anime",
+        "tags": [ "Comedia", "Escolares", "Romance" ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv"
+            }
+        ]
+    },
+    {
+        "id": 16, "title": "Classroom of the Elite 2nd Season",
+        "alternativeTitles": [
+            "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 2nd Season",
+            "Classroom of the Elite II, You-zitsu"
+            
+        ],
+        "type": "Anime",
+        "tags": [ "Drama", "Escolares", "Psicologico", "Suspenso" ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv-2nd-season"
+            }
+        ]
+    },
+    {
+        "id": 17, "title": "Classroom of the Elite 3rd Season",
+        "alternativeTitles": [
+            "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season",
+            "Welcome to the Classroom of the Elite, You-jitsu 3rd Season, You-zitsu 3rd Season"
+        ],
+        "type": "Anime",
+        "tags": [ "Drama", "Escolares", "Psicologico", "Suspenso" ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season"
             }
         ]
     }
