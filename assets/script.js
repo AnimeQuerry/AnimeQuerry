@@ -52,8 +52,8 @@ function FindByName(name){
             titleID++;
             titles[titleID] = item["alternativeTitles"][title];
         }
-        for (var title in item["alternativeTitles"]) {
-            var key = title.toLowerCase();
+        for (var title in titles) {
+            var key = titles[title].toLowerCase();
             if(key.includes(name)){
                 var li = `<li onclick='alternateLinksDisplay(${id})'>${item["title"]}</li>`;
                 if(!document.getElementById("suggested").innerText.includes(item["title"])){
