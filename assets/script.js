@@ -68,6 +68,9 @@ function alternameFilterOptions(){
         document.getElementById(`searchTags`).style.display = "none";
     }
 }
+function random(min,max){
+    return Math.floor(Math.random() * max)
+}
 function getRandom(){
     var random = database[Math.floor(Math.random() * database.length)];
     document.getElementById(`searchByName`).value = random["title"]
@@ -178,7 +181,10 @@ function FindByName(name){
                 <div id="ID${id}_item" class="item">
                     <img src="./assets/images/ID${id}.png">
                     <div class="data">
-                        <p class="itemTitle">${item["title"]}</p>
+                        <p class="itemTitle">
+                            <span>${item["title"]}</span>
+                            <button class="${random(0,2) == 0 ? "favorite":"unfavorite"}"></button>
+                        </p>
                         <div class="tags"><p>Tags: </p></div>
                         <p class="itemSubTitle">Alternative Titles</p>
                         <div class="alternativeTitles"></div>

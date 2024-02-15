@@ -23,12 +23,13 @@ header .col{
     gap: 16px;
     width: 25%;
 }
-header #left-col{justify-content: flex-start;}
+header #left-col{justify-content: flex-start;width: 100%;}
 header #right-col{
     justify-content: flex-end;
+    min-width: fit-content;
+    max-width: fit-content;
 }
 header #title{
-    width: 100%;
 }
 main {
     min-height: calc(100vh - 135px);
@@ -122,6 +123,32 @@ mark {
 .item .itemTitle {
   background-color: #ccc;
   padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.item .itemTitle span{
+    width: 100%;
+}
+.item .itemTitle .favorite {
+    width: 18px;
+    height: 18px;
+    background-image: url(/assets/images/star_full.png);
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+    filter: hue-rotate(60deg) brightness(500%);
+    background-repeat: round;
+}
+.item .itemTitle .unfavorite {
+    width: 18px;
+    height: 18px;
+    background-image: url(/assets/images/star_empty.png);
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+    filter: hue-rotate(60deg) brightness(500%);
+    background-repeat: round;
 }
 .item .itemSubTitle {
   font-weight: bold;
@@ -155,10 +182,12 @@ mark {
 .normal-tag {
   background-color: rgb(128, 192, 255);
   border: 1px solid hsl(210, 100%, 25%);
+  cursor: pointer;
 }
 .active-tag, .active-type {
   background-color: rgb(192, 255, 128);
   border: 1px solid hsl(90, 100%, 25%);
+  cursor: pointer;
 }
 .inactive-tag, .inactive-type {
   background-color: rgb(192, 192, 192);
