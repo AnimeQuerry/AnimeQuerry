@@ -100,9 +100,11 @@
             {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun-2nd-stage"}
         ]
     }, { "id": 11, "title": "Ishura",
-        "alternativeTitles": [],
-        "types": ["Anime"],
-        "tags": ["Accion","Aventuras","Fantasia"],
+        "alternativeTitles": [
+            "a","b","c","d"
+        ],
+        "types": [ "Anime" ],
+        "tags": [ "Accion", "Aventuras", "Fantasia"],
         "links": [
             {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/ishura"}
         ]

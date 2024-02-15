@@ -12,7 +12,8 @@ $(document).ready(function() {
         database_DESC = data.slice();
         database_DESC.sort(function(a, b) { return b.title.localeCompare(a.title); });
         document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length-1} animes...`);
-        FindByName(" ");
+        FindByName("");
+        console.log(database_ASC)
     })
 });
 function alternameFilterOptions(){
@@ -93,20 +94,20 @@ function changeFilter(button) {
     FindByName(document.getElementById("searchByName").value)
 }
 function FindByName(name){
+    document.getElementById(`container`).innerText = "";
     document.getElementById(`searchByName`).value = name;
     name = name.toLowerCase();
     
     var splits = name.split(" ").filter(function(segment) {return segment !== "";});
     name = splits.join(" ");
-    if (name === '') { 
-        name = " "; 
-    }
     for (var itemID in database_ASC) {
         var item = database_ASC[itemID]
         var id = item["id"]
+        if(id === null){ return; }
         var titles = [item["title"]].concat(Object.values(item["alternativeTitles"]));
         for (var title in titles) {
             var key = titles[title].toLowerCase();
+            console.log(key)
             var includeTag = false;
             var includeType = false;
             if(search_tag_mode === "all"){
@@ -128,7 +129,8 @@ function FindByName(name){
                 (search_type.length == 0 || includeType) && 
                 (search_tags.length == 0 || includeTag)
             ) {
-                if(name != " "){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
+                if(name != " "  && name != ''){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
+
                 var div = `<div id="ID${id}_item" class="item">
                     <img src="./assets/images/ID${id}.png">
                     <div class="data">
