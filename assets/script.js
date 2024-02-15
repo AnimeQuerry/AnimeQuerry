@@ -1,4 +1,6 @@
 var database = null;
+var database_TYPES = [ "Anime", "Film", "Manhwa", "Manga", "OVA", "Special" ]; database_TYPES.sort();
+var database_TAGS = [ "Accion", "Comedia", "Fantasia", "Escolares", "Romance", "Shounen", "Ecchi", "Aventuras", "Accion", "Sobrenatural", "Yaoi", "Yuri", "Drama", "Ciencia Ficcion", "Superpoderes", "Harem", "Comida"]; database_TAGS.sort()
 var database_ASC = null;
 var database_DESC = null;
 var search_tags = [];
@@ -6,14 +8,57 @@ var search_type = [];
 var search_tag_mode = "some";
 $(document).ready(function() {
     $.getJSON('./assets/database.json', function(data) {
+        for(const tag in database_TAGS) {
+            document.getElementById("searchTags").getElementsByTagName(`div`)[1].innerHTML += `<button name="tag-${database_TAGS[tag].toLowerCase().replaceAll(' ','-')}" class="inactive-tag" onclick="changeFilter(this)">${database_TAGS[tag]}</button>`;
+        }
+        for(const type in database_TYPES) {
+            document.getElementById("searchTags").getElementsByTagName(`div`)[0].innerHTML += `<button name="type-${database_TYPES[type].toLowerCase().replaceAll(' ','-')}" class="inactive-type" onclick="changeFilter(this)">${database_TYPES[type]}</button>`;
+        }
         database = data;
         database_ASC = data.slice();
         database_ASC.sort(function(a, b) { return a.title.localeCompare(b.title); });
         database_DESC = data.slice();
         database_DESC.sort(function(a, b) { return b.title.localeCompare(a.title); });
         document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length-1} animes...`);
+        var showAlert = false;
+        var news = ``
+        if (!window.localStorage.getItem("lastAnimeCount")) { window.localStorage.setItem("lastAnimeCount", 0); } 
+        if (!window.localStorage.getItem("lastTagsCount"))  { window.localStorage.setItem("lastTagsCount",  0); }
+        if (!window.localStorage.getItem("lastTypesCount")) { window.localStorage.setItem("lastTypesCount", 0); }
+
+        if(window.localStorage.getItem("lastAnimeCount") != database.length-1){
+            var amount = database.length-1-window.localStorage.getItem("lastAnimeCount");
+                 if (amount ==  1) { news += `<li>Hemos añadido ${Math.abs(amount)} anime en nuestra base de datos</li>`;}
+            else if (amount >   1) { news += `<li>Hemos añadido ${Math.abs(amount)} animes en nuestra base de datos</li>`;}
+            else if (amount == -1) { news += `<li>Hemos eliminado ${Math.abs(amount)} anime de nuestra base de datos</li>`;}
+            else if (amount <   1) { news += `<li>Hemos eliminado ${Math.abs(amount)} animes de nuestra base de datos</li>`;}
+            showAlert = true;
+            window.localStorage.setItem("lastAnimeCount", database.length-1);
+        }
+        if(window.localStorage.getItem("lastTagsCount") != database_TAGS.length){
+            var amount = database_TAGS.length-window.localStorage.getItem("lastTagsCount");
+            if (amount ==  1) { news += `<li>Hemos añadido ${Math.abs(amount)} etiqueta en nuestro filtro</li>`;}
+            else if (amount >   1) { news += `<li>Hemos añadido ${Math.abs(amount)} etiquetas en nuestro filtro</li>`;}
+            else if (amount == -1) { news += `<li>Hemos eliminado ${Math.abs(amount)} etiqueta de nuestro filtro</li>`;}
+            else if (amount <   1) { news += `<li>Hemos eliminado ${Math.abs(amount)} etiquetas de nuestro filtro</li>`;}
+            showAlert = true;
+            window.localStorage.setItem("lastTagsCount", database_TAGS.length);
+        }
+        if(window.localStorage.getItem("lastTypesCount") != database_TYPES.length){
+            var amount = database_TYPES.length-window.localStorage.getItem("lastTypesCount");
+            if (amount ==  1) { news += `<li>Hemos añadido ${Math.abs(amount)} tipo en nuestro filtro</li>`;}
+            else if (amount >   1) { news += `<li>Hemos añadido ${Math.abs(amount)} tipos en nuestro filtro</li>`;}
+            else if (amount == -1) { news += `<li>Hemos eliminado ${Math.abs(amount)} tipo de nuestro filtro</li>`;}
+            else if (amount <   1) { news += `<li>Hemos eliminado ${Math.abs(amount)} tipos de nuestro filtro</li>`;}
+            showAlert = true;
+            window.localStorage.setItem("lastTypesCount", database_TYPES.length);
+        }
+        if(showAlert){
+            document.getElementById(`news-contain`).innerHTML += news;
+            document.getElementById(`alert`).style.display = "flex";
+        }
+
         FindByName("");
-        console.log(database_ASC)
     })
 });
 function alternameFilterOptions(){
@@ -107,7 +152,6 @@ function FindByName(name){
         var titles = [item["title"]].concat(Object.values(item["alternativeTitles"]));
         for (var title in titles) {
             var key = titles[title].toLowerCase();
-            console.log(key)
             var includeTag = false;
             var includeType = false;
             if(search_tag_mode === "all"){
@@ -130,7 +174,8 @@ function FindByName(name){
                 (search_tags.length == 0 || includeTag)
             ) {
                 if(name != " "  && name != ''){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
-                var div = `<div id="ID${id}_item" class="item">
+                var div = `
+                <div id="ID${id}_item" class="item">
                     <img src="./assets/images/ID${id}.png">
                     <div class="data">
                         <p class="itemTitle">${item["title"]}</p>
@@ -140,7 +185,8 @@ function FindByName(name){
                         <p class="itemSubTitle">Sources</p>
                         <div class="see-more"></div>
                     </div>
-                </div>`;
+                </div>
+                `;
                 if(!document.getElementById(`ID${id}_item`)){
                     document.getElementById("container").innerHTML += div;
                     document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0];

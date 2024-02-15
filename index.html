@@ -30,49 +30,72 @@
     </nav>
     <div id="searchTags" style="display: none;">
       <p class="title">Tipo: </p>
-      <button name="type-anime" class="inactive-type" onclick="changeFilter(this)">Anime</button>
-      <button name="type-film" class="inactive-type" onclick="changeFilter(this)">Film</button>
-      <button name="type-manhwa" class="inactive-type" onclick="changeFilter(this)">Manhwa</button>
-      <button name="type-manga" class="inactive-type" onclick="changeFilter(this)">Manga</button>
-      <button name="type-ova" class="inactive-type" onclick="changeFilter(this)">OVA</button>
-      <button name="type-special" class="inactive-type" onclick="changeFilter(this)">Special</button>
+      <div style="display: flex; gap: 8px;"></div>
       <p class="title">Etiquetas: <button class="tag-mode-some" onclick="changeFilter(this)">Modo limitado</button></p>
-      <button name="tag-isekai" class="inactive-tag" onclick="changeFilter(this)">Isekai</button>
-      <button name="tag-comedia" class="inactive-tag" onclick="changeFilter(this)">Comedia</button>
-      <button name="tag-fantasia" class="inactive-tag" onclick="changeFilter(this)">Fantasia</button>
-      <button name="tag-escolares" class="inactive-tag" onclick="changeFilter(this)">Escolares</button>
-      <button name="tag-romance" class="inactive-tag" onclick="changeFilter(this)">Romance</button>
-      <button name="tag-shounen" class="inactive-tag" onclick="changeFilter(this)">Shounen</button>
-      <button name="tag-ecchi" class="inactive-tag" onclick="changeFilter(this)">Ecchi</button>
-      <button name="tag-aventuras" class="inactive-tag" onclick="changeFilter(this)">Aventuras</button>
-      <button name="tag-accion" class="inactive-tag" onclick="changeFilter(this)">Accion</button>
-      <button name="tag-sobrenatural" class="inactive-tag" onclick="changeFilter(this)">Sobrenatural</button>
-      <button name="tag-yaoi" class="inactive-tag" onclick="changeFilter(this)">Yaoi</button>
-      <button name="tag-yuri" class="inactive-tag" onclick="changeFilter(this)">Yuri</button>
-      <button name="tag-drama" class="inactive-tag" onclick="changeFilter(this)">Drama</button>
-      <button name="tag-ciencia-ficcion" class="inactive-tag" onclick="changeFilter(this)">Ciencia Ficcion</button>
-      <button name="tag-superpoderes" class="inactive-tag" onclick="changeFilter(this)">Superpoderes</button>
+      <div style="display: flex; gap: 8px;"></div>
     </div>
     <div id="container"></div>
-    <div id="disqus_thread"></div>
-    <script>
-      /**
-      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-      /*
-      var disqus_config = function () {
-      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-      */
-      (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://https-moisesjpg-github-io-animequerry.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div id="comentaries">
+      <div id="disqus_thread"></div>
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://https-moisesjpg-github-io-animequerry.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    </div>
+    <div id="alert" style="
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.25);
+      align-items: center;
+      justify-content: center;
+    ">
+      <div class="box" style="
+        width: fit-content;
+        background-color: rgb(128, 192, 255);
+        border-radius: 32px;
+        border: 8px solid rgb(0 64 128);
+        box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.5);
+      ">
+        <h2 style="
+          border-bottom: 8px solid hsl(210, 100%, 25%);
+          background-color: hsl(210, 100%, 50%);
+          border-radius: 24px 24px 0px 0px;
+          padding: 8px;
+        ">¡Bienvenido de nuevo, Usuario!</h2>
+        <div id="news" style="padding: 8px;">
+          <h3>Traemos novedades:</h3>
+          <ul style="margin-left: 16px;" id="news-contain"></ul>
+        </div>
+        <button style="
+          margin: 8px;
+          width: calc(100% - 16px);
+          padding: 8px;
+          border-radius: 16px;
+          background-color: rgb(255, 255, 128);
+          border: 4px solid hsl(210, 100%, 25%);
+          font-weight: bold;
+        " onclick="document.getElementById('alert').remove()">¡Gracias!</button>
+      </div>
+    </div>
   </main>
   <footer>
     <p>&copy; 2024 AnimeQuerry. Todos los derechos reservados.</p>

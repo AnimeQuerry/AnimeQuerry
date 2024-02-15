@@ -1,5 +1,5 @@
 [
-       { "id":  0, "title": "Tsuki ga Michibiku Isekai Douchuu 1st Season",
+    { "id":  0, "title": "Tsuki ga Michibiku Isekai Douchuu 1st Season",
         "alternativeTitles": [
             "Tsukimichi -Moonlit Fantasy-",
             "Tsukimichi: Moonlit Fantasy"
@@ -101,7 +101,7 @@
         ]
     }, { "id": 11, "title": "Ishura",
         "alternativeTitles": [
-            "a","b","c","d"
+
         ],
         "types": [ "Anime" ],
         "tags": [ "Accion", "Aventuras", "Fantasia"],
@@ -231,6 +231,45 @@
         "links": [
             {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/ore-dake-level-up-na-ken"},
             {"source": "(Manhwa) TuMangaOnline", "url": "https://visortmo.com/library/manhwa/217/solo-leveling"}
+        ]
+    }, { "id": 25, "title": "Mato Seihei no Slave", 
+        "alternativeTitles": [
+            "Slave of the Magic Capital's Elite Troops, Mabotai",
+            "Chained Soldier"
+        ],
+        "types": ["Anime"],
+        "tags": ["Accion","Ecchi","Fantasia","Harem","Shounen"],
+        "links": [
+            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/mato-seihei-no-slave"}
+        ]
+    }, { "id": 26, "title": "Dungeon Meshi", 
+        "alternativeTitles": [
+            "Dungeon Food",
+            "Delicious in Dungeon"
+        ],
+        "types": ["Anime"],
+        "tags": ["Comedia","Fantasia","Seinen","Comida"],
+        "links": [
+            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/dungeon-meshi"}
+        ]
+    }, { "id": 27, "title": "Gekkan Mousou Kagaku",
+        "alternativeTitles": [
+            "Delusional Monthly Magazine"
+        ],
+        "types": ["Anime"],
+        "tags": ["Fantasia"],
+        "links": [
+            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/gekkan-mousou-kagaku"}
+        ]
+    }, { "id": 28, "title": "Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga", 
+        "alternativeTitles": [
+            "The other world doesn't stand a chance against the power of instant death",
+            "My Instant Death Ability is So Overpowered, No One in This Other World Stands a Chance Against Me!"
+        ],
+        "types": ["Anime"],
+        "tags": ["Accion","Aventuras","Fantasia","Isekai"],
+        "links": [
+            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/sokushi-cheat-ga-saikyou-sugite-isekai-no-yatsura-ga-marude-aite-ni-naranai-n-desu-ga"}
         ]
     }, { "id": null, "title": "x", "alternativeTitles": [],"types": [],"tags": [],"links": [{"source": "", "url": ""}]
     }
