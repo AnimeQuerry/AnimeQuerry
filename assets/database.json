@@ -187,17 +187,19 @@
         "types": ["Anime"],
         "tags": ["Accion","Aventuras","Drama","Fantasia","Shounen"],
         "links": [
-            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/sengoku-youko"}
+            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/sengoku-youko"},
+            {"source": "(Anime) OtakusTV", "url": "https://www1.otakustv.com/anime/sengoku-youko"}
         ]
     }, { "id": 21, "title": "Mahou Shoujo ni Akogarete",
         "alternativeTitles": [
             "Gushing over Magical Girls",
             "Looking up to Magical Girls, I Admire Magical Girls, and..."
         ],
-        "types": ["Anime"],
+        "types": [ "Anime" ],
         "tags": ["Accion","Comedia","Ecchi","Fantasia"],
         "links": [
-            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/mahou-shoujo-ni-akogarete"}
+            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/mahou-shoujo-ni-akogarete"},
+            {"source": "(Anime) OtakusTV", "url": "https://www1.otakustv.com/anime/mahou-shoujo-ni-akogarete"}
         ]
     }, { "id": 22, "title": "30-sai made Doutei dato Mahoutsukai ni Nareru Rashii", 
         "alternativeTitles": [
@@ -206,7 +208,8 @@
         "types": ["Anime"],
         "tags": ["Comedia","Sobrenatural","Yaoi"],
         "links": [
-            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/30sai-made-doutei-dato-mahoutsukai-ni-nareru-rashii"}
+            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/30sai-made-doutei-dato-mahoutsukai-ni-nareru-rashii"},
+            {"source": "(Anime) OtakusTV", "url": "https://www1.otakustv.com/anime/30-sai-made-doutei-dato-mahoutsukai-ni-nareru-rashii"}
         ]
     }, { "id": 23, "title": "Metallic Rouge", 
         "alternativeTitles": [
@@ -215,18 +218,19 @@
         "types": ["Anime"],
         "tags": ["Accion", "Ciencia Ficcion"],
         "links": [
-            {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/metallic-rouge"}
+            { "source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/metallic-rouge"},
+            { "source": "(Anime) OtakusTV", "url": "https://www1.otakustv.com/anime/metallic-rouge"}
         ]
     }, { "id": 24, "title": "Solo Leveling",
         "alternativeTitles": [
             "Ore dake Level Up na Ken",
             "Na Honjaman Level Up, I Level Up Alone, 나 혼자만 레벨업"
         ],
-        "types": [ "Anime", "Manga"],
-        "tags": [ "Accion", "Aventuras", "Fantasia"],
+        "types": [ "Anime", "Manhwa" ],
+        "tags": [ "Accion", "Aventuras", "Fantasia" ],
         "links": [
             {"source": "(Anime) AnimeFLV", "url": "https://www3.animeflv.net/anime/ore-dake-level-up-na-ken"},
-            {"source": "(Manga) TuMangaOnline", "url": "https://visortmo.com/library/manhwa/217/solo-leveling"}
+            {"source": "(Manhwa) TuMangaOnline", "url": "https://visortmo.com/library/manhwa/217/solo-leveling"}
         ]
     }, { "id": null, "title": "x", "alternativeTitles": [],"types": [],"tags": [],"links": [{"source": "", "url": ""}]
     }

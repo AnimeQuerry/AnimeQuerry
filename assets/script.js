@@ -130,7 +130,6 @@ function FindByName(name){
                 (search_tags.length == 0 || includeTag)
             ) {
                 if(name != " "  && name != ''){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
-
                 var div = `<div id="ID${id}_item" class="item">
                     <img src="./assets/images/ID${id}.png">
                     <div class="data">
