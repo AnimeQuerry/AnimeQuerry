@@ -11,10 +11,10 @@
 <body>
   <header>
     <div id="left-col" class="col">
-      <h1 id="title">AnimeQuerry</h1>
+      <h1 id="title" onclick="go('.')">AnimeQuerry</h1>
     </div>
     <div id="right-col" class="col">
-      <button onclick="getRandom()">Random</button>
+      <button id="random" onclick="getRandom()">Random</button>
     </div>
   </header>
   <main>
@@ -30,9 +30,9 @@
       <p class="title">Mi cuenta: </p>
       <div style="display: flex; gap: 8px; justify-content: center; flex-direction: row; flex-wrap: wrap;">
         <button name="account-tag-favoritos" class="inactive-account-tag" onclick="changeFilter(this)">Favoritos</button>
-        <button name="account-tag-favoritos" class="inactive-account-tag" onclick="changeFilter(this)">Viendo</button>
-        <button name="account-tag-favoritos" class="inactive-account-tag" onclick="changeFilter(this)">Visto</button>
-        <button name="account-tag-favoritos" class="inactive-account-tag" onclick="changeFilter(this)">Por ver</button>
+        <button name="account-tag-viendo" class="inactive-account-tag" onclick="changeFilter(this)">Viendo</button>
+        <button name="account-tag-visto" class="inactive-account-tag" onclick="changeFilter(this)">Visto</button>
+        <button name="account-tag-por-ver" class="inactive-account-tag" onclick="changeFilter(this)">Por ver</button>
       </div>
     </div>
     <div id="container"></div>

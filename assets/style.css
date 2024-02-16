@@ -29,7 +29,11 @@ header #right-col{
     min-width: fit-content;
     max-width: fit-content;
 }
-header #title{
+header #title{ }
+header #random{
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
 }
 main {
     min-height: calc(100vh - 135px);
@@ -75,7 +79,7 @@ nav #searchByName {
 }
 #searchTags button{
   width: fit-content;
-  padding: 4px;
+  padding: 4px 8px;
   border-radius: 8px;
 }
   
@@ -124,6 +128,7 @@ mark {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  gap: 4px;
 }
 .item .favorite {
   background-color: rgba(255, 255, 0, 0.5);
@@ -132,7 +137,48 @@ mark {
   background-color: rgba(128, 128, 128, 0.5);
 }
 .item .itemTitle span{
-    width: 100%;
+    width: calc(100% - 36px);
+}
+.item .itemTitle .un-see {
+    width: 18px;
+    height: 18px;
+    background-image: url(./images/eye_full.png);
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+    filter: hue-rotate(60deg) contrast(0);
+    background-repeat: round;
+}
+.item .itemTitle .seen {
+    width: 18px;
+    height: 18px;
+    background-image: url(./images/eye_full.png);
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+    filter: hue-rotate(180deg) brightness(200%);
+    background-repeat: round;
+}
+.item .itemTitle .to-see {
+    width: 18px;
+    height: 18px;
+    background-image: url(./images/eye_full.png);
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+    filter: hue-rotate(-60deg) brightness(200%);
+    background-repeat: round;
+}
+.item .itemTitle .seeing {
+    width: 18px;
+    height: 18px;
+    background-image: url(./images/eye_full.png);
+    background-size: cover;
+    border: 0;
+    background-color: transparent;
+    filter: hue-rotate(120deg) brightness(200%);
+    background-repeat: round;
+    min-width: 18px;
 }
 .item .itemTitle .favorite {
     width: 18px;
@@ -143,6 +189,7 @@ mark {
     background-color: transparent;
     filter: hue-rotate(60deg) brightness(500%);
     background-repeat: round;
+    min-width: 18px;
 }
 .item .itemTitle .unfavorite {
     width: 18px;
@@ -188,9 +235,25 @@ mark {
   border: 1px solid hsl(210, 100%, 25%);
   cursor: pointer;
 }
-.active-tag, .active-type, .active-account-tag {
+.active-account-tag[name="account-tag-favoritos"]{
+  background-color: rgb(255,255,128);
+  border: 1px solid rgb(128,128,64);
+}
+.active-account-tag[name="account-tag-viendo"]{
+  background-color: rgb(128,255,128);
+  border: 1px solid rgb(64,128,64);
+}
+.active-account-tag[name="account-tag-visto"]{
+  background-color: rgb(128,255,255);
+  border: 1px solid rgb(64,128,128);
+}
+.active-account-tag[name="account-tag-por-ver"]{
+  background-color: rgb(255,128,255);
+  border: 1px solid rgb(128,64,128);
+}
+.active-tag, .active-type {
   background-color: rgb(192, 255, 128);
-  border: 1px solid hsl(90, 100%, 25%);
+  border: 1px solid rgb(64 128 0);
   cursor: pointer;
 }
 .inactive-tag, .inactive-type, .inactive-account-tag {
