@@ -38,15 +38,44 @@
         "favorite": false
     },
     {
+        "id": 40,
+        "title": "Assesination Classroom 1st Season",
+        "alternativeTitles": [
+            "Ansatsu Kyoushitsu"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Comedia",
+            "Escolares",
+            "Shounen",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ansatsu-kyoushitsu-tv"
+            }
+        ],
+        "favorite": false
+    },
+    {
         "id": 8,
-        "title": "Ansatsu Kyoushitsu: 365-nichi no Jikan",
-        "alternativeTitles": [],
+        "title": "Assesination Classroom: 365-nichi no Jikan",
+        "alternativeTitles": [
+            "Ansatsu Kyoushitsu: 365-nichi no Jikan"
+        ],
         "type": "Film",
-        "tags": [],
+        "tags": [
+            "Accion",
+            "Comedia",
+            "Escolares",
+            "Shounen"
+        ],
         "links": [
             {
                 "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan/pelicula"
+                "url": "https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan"
             }
         ],
         "favorite": false
@@ -81,7 +110,8 @@
             "Comedia",
             "Escolares",
             "Shounen",
-            "Superpoderes"
+            "Superpoderes",
+            "Multi-Season"
         ],
         "links": [
             {
@@ -103,7 +133,8 @@
             "Comedia",
             "Escolares",
             "Shounen",
-            "Superpoderes"
+            "Superpoderes",
+            "Multi-Season"
         ],
         "links": [
             {
@@ -125,12 +156,37 @@
             "Comedia",
             "Escolares",
             "Shounen",
-            "Superpoderes"
+            "Superpoderes",
+            "Multi-Season"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
                 "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-3rd-season"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 37,
+        "title": "Chiyu Mahou no Machigatta Tsukaikata",
+        "alternativeTitles": [
+            "The Wrong Way to Use Healing Magic"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Fantasia",
+            "Isekai"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/chiyu-mahou-no-machigatta-tsukaikata"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/chiyu-mahou-no-machigatta-tsukaikata"
             }
         ],
         "favorite": false
@@ -145,7 +201,8 @@
         "tags": [
             "Comedia",
             "Escolares",
-            "Romance"
+            "Romance",
+            "Multi-Season"
         ],
         "links": [
             {
@@ -167,7 +224,8 @@
             "Drama",
             "Escolares",
             "Psicologico",
-            "Suspenso"
+            "Suspenso",
+            "Multi-Season"
         ],
         "links": [
             {
@@ -189,7 +247,8 @@
             "Drama",
             "Escolares",
             "Psicologico",
-            "Suspenso"
+            "Suspenso",
+            "Multi-Season"
         ],
         "links": [
             {
@@ -347,7 +406,8 @@
         "tags": [
             "Drama",
             "Escolares",
-            "Romance"
+            "Romance",
+            "Multi-Season"
         ],
         "links": [
             {
@@ -367,7 +427,8 @@
         "tags": [
             "Drama",
             "Escolares",
-            "Romance"
+            "Romance",
+            "Multi-Season"
         ],
         "links": [
             {
@@ -422,6 +483,31 @@
         "favorite": false
     },
     {
+        "id": 32,
+        "title": "Majo to Yajuu",
+        "alternativeTitles": [
+            "Witch and the Beast",
+            "The Witch and the Beast"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Fantasia",
+            "Seinen"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/majo-to-yajuu"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/majo-to-yajuu"
+            }
+        ],
+        "favorite": false
+    },
+    {
         "id": 25,
         "title": "Mato Seihei no Slave",
         "alternativeTitles": [
@@ -461,6 +547,102 @@
             {
                 "source": "OtakusTV",
                 "url": "https://www1.otakustv.com/anime/metallic-rouge"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 38,
+        "title": "Momochi-san Chi no Ayakashi Ouji",
+        "alternativeTitles": [
+            "The Demon Prince of Momochi House"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Fantasia",
+            "Romance",
+            "Shoujo"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/momochisan-chi-no-ayakashi-ouji"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/momochi-san-chi-no-ayakashi-ouji"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 34,
+        "title": "Nozomanu Fushi no Boukensha",
+        "alternativeTitles": [
+            "The Unwanted Undead Adventurer"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Aventuras",
+            "Fantasia"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/nozomanu-fushi-no-boukensha"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/nozomanu-fushi-no-boukensha"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 35,
+        "title": "Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita",
+        "alternativeTitles": [
+            "The Weakest Tamer Began a Journey to Pick Up Trash"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Aventuras",
+            "Fantasia"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/saijaku-tamer-wa-gomi-hiroi-no-tabi-wo-hajimemashita"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/saijaku-tamer-wa-gomi-hiroi-no-tabi-wo-hajimemashita"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 33,
+        "title": "Sasaki to Pii-chan",
+        "alternativeTitles": [
+            "Sasaki and Peeps"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Aventuras",
+            "Comedia",
+            "Fantasia",
+            "Isekai"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/sasaki-to-piichan"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/sasaki-to-pii-chan"
             }
         ],
         "favorite": false
@@ -539,7 +721,7 @@
             "Ore dake Level Up na Ken",
             "Na Honjaman Level Up, I Level Up Alone, \ub098 \ud63c\uc790\ub9cc \ub808\ubca8\uc5c5"
         ],
-        "type": "Manhwa",
+        "type": "Anime",
         "tags": [
             "Accion",
             "Aventuras",
@@ -549,6 +731,32 @@
             {
                 "source": "TuMangaOnline",
                 "url": "https://visortmo.com/library/manhwa/217/solo-leveling"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 36,
+        "title": "Sousou no Frieren",
+        "alternativeTitles": [
+            "Frieren at the Funeral",
+            "Frieren: Beyond Journey's End"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Aventuras",
+            "Drama",
+            "Fantasia",
+            "Shounen"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/sousou-no-frieren"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/sousou-no-frieren"
             }
         ],
         "favorite": false
@@ -582,7 +790,8 @@
             "Aventuras",
             "Fantasia",
             "Isekai",
-            "Magic"
+            "Magic",
+            "Multi-Season"
         ],
         "links": [
             {
@@ -604,12 +813,59 @@
             "Aventuras",
             "Comedia",
             "Fantasia",
-            "Isekai"
+            "Isekai",
+            "Multi-Season"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
                 "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu-2nd-season"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 31,
+        "title": "Urusei Yatsura (2022) 1st Season",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Ciencia Ficcion",
+            "Comedia",
+            "Romance",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/urusei-yatsura-2022"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/urusei-yatsura-2022"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 39,
+        "title": "Urusei Yatsura (2022) 2nd Season",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Ciencia Ficcion",
+            "Comedia",
+            "Romance",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/urusei-yatsura-2022"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/urusei-yatsura-2022-2nd-season"
             }
         ],
         "favorite": false
@@ -626,6 +882,25 @@
             {
                 "source": "AnimeFLV",
                 "url": "https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen"
+            }
+        ],
+        "favorite": false
+    },
+    {
+        "id": 30,
+        "title": "Yuuki Bakuhatsu Bang Bravern",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Ciencia Ficcion",
+            "Mecha",
+            "Militar"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/yuuki-bakuhatsu-bang-bravern"
             }
         ],
         "favorite": false

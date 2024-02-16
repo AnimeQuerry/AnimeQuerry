@@ -7,13 +7,13 @@ def verify(json_data):
             "id": item.get("id", 1),
             "title": item.get("title", ""),
             "alternativeTitles": item.get("alternativeTitles", []),
-            "type": item.get("types", ""),
+            "type": item.get("type", ""),
             "tags": item.get("tags", []),
             "links": item.get("links", []),
             "favorite": False
         }
         verificated.append(default)
-    verificated.sort(key=lambda x: x["title"])
+    verificated.sort(key=lambda x: int(x["id"]) if x["id"] is not None else len(verificated)-1)
     return verificated
 
 # Cargar el JSON desde el archivo
