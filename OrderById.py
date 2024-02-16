@@ -9,8 +9,7 @@ def verify(json_data):
             "alternativeTitles": item.get("alternativeTitles", []),
             "type": item.get("type", ""),
             "tags": item.get("tags", []),
-            "links": item.get("links", []),
-            "favorite": False
+            "links": item.get("links", [])
         }
         verificated.append(default)
     verificated.sort(key=lambda x: int(x["id"]) if x["id"] is not None else len(verificated)-1)
