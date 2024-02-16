@@ -37,9 +37,8 @@ main {
 }
 nav{
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
 }
 nav #filter-button{
   width: 64px;
@@ -121,11 +120,16 @@ mark {
   height: auto;
 }
 .item .itemTitle {
-  background-color: #ccc;
   padding: 8px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+.item .favorite {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.item .unfavorite {
+  background-color: rgba(128, 128, 128, 0.5);
 }
 .item .itemTitle span{
     width: 100%;
@@ -143,11 +147,11 @@ mark {
 .item .itemTitle .unfavorite {
     width: 18px;
     height: 18px;
-    background-image: url(/assets/images/star_empty.png);
+    background-image: url(/assets/images/star_full.png);
     background-size: cover;
     border: 0;
     background-color: transparent;
-    filter: hue-rotate(60deg) brightness(500%);
+    filter: hue-rotate(60deg) contrast(0);
     background-repeat: round;
 }
 .item .itemSubTitle {
@@ -184,12 +188,12 @@ mark {
   border: 1px solid hsl(210, 100%, 25%);
   cursor: pointer;
 }
-.active-tag, .active-type {
+.active-tag, .active-type, .active-account-tag {
   background-color: rgb(192, 255, 128);
   border: 1px solid hsl(90, 100%, 25%);
   cursor: pointer;
 }
-.inactive-tag, .inactive-type {
+.inactive-tag, .inactive-type, .inactive-account-tag {
   background-color: rgb(192, 192, 192);
   border: 1px solid hsl(0, 0%, 25%);
 }
@@ -197,3 +201,16 @@ mark {
 @media screen and (min-width:  768px) { .item { width: calc(100% / 2 - 6px);} }
 @media screen and (min-width: 1280px) { .item { width: calc(100% / 3 - 8px);} }
 @media screen and (min-width: 1792px) { .item { width: calc(100% / 4 - 8px);} }
+
+/* ALERT CSS */
+#alert-page {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.25);
+  align-items: center;
+  justify-content: center;
+}

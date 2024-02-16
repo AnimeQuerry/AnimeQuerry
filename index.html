@@ -24,9 +24,16 @@
     </nav>
     <div id="searchTags" style="display: none;">
       <p class="title">Tipo: </p>
-      <div style="display: flex; gap: 8px;"></div>
+      <div style="display: flex; gap: 8px; justify-content: center; flex-direction: row; flex-wrap: wrap;"></div>
       <p class="title">Etiquetas: <button class="tag-mode-some" onclick="changeFilter(this)">Modo limitado</button></p>
-      <div style="display: flex; gap: 8px;"></div>
+      <div style="display: flex; gap: 8px; justify-content: center; flex-direction: row; flex-wrap: wrap;"></div>
+      <p class="title">Mi cuenta: </p>
+      <div style="display: flex; gap: 8px; justify-content: center; flex-direction: row; flex-wrap: wrap;">
+        <button name="account-tag-favoritos" class="inactive-account-tag" onclick="changeFilter(this)">Favoritos</button>
+        <button name="account-tag-favoritos" class="inactive-account-tag" onclick="changeFilter(this)">Viendo</button>
+        <button name="account-tag-favoritos" class="inactive-account-tag" onclick="changeFilter(this)">Visto</button>
+        <button name="account-tag-favoritos" class="inactive-account-tag" onclick="changeFilter(this)">Por ver</button>
+      </div>
     </div>
     <div id="container"></div>
     <div id="comentaries">
@@ -51,51 +58,40 @@
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     
     </div>
-    <div id="alert" style="
-      display: none;
-      width: 100vw;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: rgba(0,0,0,0.25);
-      align-items: center;
-      justify-content: center;
-    ">
-      <div class="box" style="
-        width: fit-content;
-        background-color: rgb(128, 192, 255);
-        border-radius: 32px;
-        border: 8px solid rgb(0 64 128);
-        box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.5);
-      ">
-        <h2 style="
-          border-bottom: 8px solid hsl(210, 100%, 25%);
-          background-color: hsl(210, 100%, 50%);
-          border-radius: 24px 24px 0px 0px;
-          padding: 8px;
-        ">¡Bienvenido de nuevo, Usuario!</h2>
-        <div id="news" style="padding: 8px;">
-          <h3>Traemos novedades:</h3>
-          <ul style="margin-left: 16px;" id="news-contain"></ul>
-        </div>
-        <button style="
-          margin: 8px;
-          width: calc(100% - 16px);
-          padding: 8px;
-          border-radius: 16px;
-          background-color: rgb(255, 255, 128);
-          border: 4px solid hsl(210, 100%, 25%);
-          font-weight: bold;
-        " onclick="document.getElementById('alert').remove()">¡Gracias!</button>
-      </div>
-    </div>
   </main>
+  <div id="alert-page">
+    <div class="box" style="
+      width: fit-content;
+      background-color: rgb(128, 192, 255);
+      border-radius: 32px;
+      border: 8px solid rgb(0 64 128);
+      box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.5);
+    ">
+      <h2 style="
+        border-bottom: 8px solid hsl(210, 100%, 25%);
+        background-color: hsl(210, 100%, 50%);
+        border-radius: 24px 24px 0px 0px;
+        padding: 8px;
+      ">¡Bienvenido de nuevo, Usuario!</h2>
+      <div id="news" style="padding: 8px;">
+        <h3>Traemos novedades:</h3>
+        <ul style="margin-left: 16px;" id="news-contain"></ul>
+      </div>
+      <button style="
+        margin: 8px;
+        width: calc(100% - 16px);
+        padding: 8px;
+        border-radius: 16px;
+        background-color: rgb(255, 255, 128);
+        border: 4px solid hsl(210, 100%, 25%);
+        font-weight: bold;
+      " onclick="document.getElementById('alert').remove()">¡Gracias!</button>
+    </div>
+  </div>
   <footer>
     <p>&copy; 2024 AnimeQuerry. Todos los derechos reservados.</p>
     <br>
     <img src="https://counter8.freecounterstat.com/private/counter.php?c=6qc63fg19nax833dnxmhetbt99beab3a&amp;init='+date_init.getTime()+'&amp;init_freecounterstat='+init_freecounterstat+'&amp;library=library_counters&amp;coef=0.5&amp;type=163&amp;lenght=4&amp;pv=0">
-
   </footer>
 </body>
 <script src="./assets/script.js"></script>

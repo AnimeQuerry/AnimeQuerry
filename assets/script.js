@@ -1,9 +1,9 @@
 var database = null;
 var database_TYPES = [ "Anime", "Film", "Manhwa", "Manga", "OVA", "Special" ]; database_TYPES.sort();
 var database_TAGS = [ "Accion", "Comedia", "Fantasia", "Escolares", "Romance", "Shounen", "Ecchi", "Aventuras", "Accion", "Sobrenatural", "Yaoi", "Yuri", "Drama", "Ciencia Ficcion", "Superpoderes", "Harem", "Comida"]; database_TAGS.sort()
-var database_ASC = null;
-var database_DESC = null;
+var userFavorites = [];
 var search_tags = [];
+var search_favorites = false;
 var search_type = [];
 var search_tag_mode = "some";
 $(document).ready(function() {
@@ -15,17 +15,15 @@ $(document).ready(function() {
             document.getElementById("searchTags").getElementsByTagName(`div`)[0].innerHTML += `<button name="type-${database_TYPES[type].toLowerCase().replaceAll(' ','-')}" class="inactive-type" onclick="changeFilter(this)">${database_TYPES[type]}</button>`;
         }
         database = data;
-        database_ASC = data.slice();
-        database_ASC.sort(function(a, b) { return a.title.localeCompare(b.title); });
-        database_DESC = data.slice();
-        database_DESC.sort(function(a, b) { return b.title.localeCompare(a.title); });
         document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length-1} animes...`);
         var showAlert = false;
         var news = ``
         if (!window.localStorage.getItem("lastAnimeCount")) { window.localStorage.setItem("lastAnimeCount", 0); } 
         if (!window.localStorage.getItem("lastTagsCount"))  { window.localStorage.setItem("lastTagsCount",  0); }
         if (!window.localStorage.getItem("lastTypesCount")) { window.localStorage.setItem("lastTypesCount", 0); }
-
+        if (!window.localStorage.getItem("userFavorites"))  { window.localStorage.setItem("userFavorites", "[]"); }
+        userFavorites = getFavorite();
+        console.log(userFavorites)
         if(window.localStorage.getItem("lastAnimeCount") != database.length-1){
             var amount = database.length-1-window.localStorage.getItem("lastAnimeCount");
                  if (amount ==  1) { news += `<li>Hemos añadido ${Math.abs(amount)} anime en nuestra base de datos</li>`;}
@@ -55,12 +53,37 @@ $(document).ready(function() {
         }
         if(showAlert){
             document.getElementById(`news-contain`).innerHTML += news;
-            document.getElementById(`alert`).style.display = "flex";
+            document.getElementById(`alert-page`).style.display = "flex";
         }
-
-        FindByName("");
+        FindByName("")
     })
 });
+function removeFavorite(id) {
+    userFavorites.splice(userFavorites.indexOf(id), 1);
+    window.localStorage.setItem("userFavorites", JSON.stringify(userFavorites))
+    var element = document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("itemTitle")[0]
+    element.getElementsByClassName("favorite")[0].setAttribute("onclick", `addFavorite(${id})`);
+    element.getElementsByClassName("favorite")[0].classList.add("unfavorite");
+    element.getElementsByClassName("favorite")[0].classList.remove("favorite");
+    element.classList.add('unfavorite');
+    element.classList.remove('favorite');
+    if(search_favorites){
+        document.getElementById(`ID${id}_item`).remove();
+    }
+}
+function addFavorite(id){
+    userFavorites.push(id);
+    window.localStorage.setItem("userFavorites", JSON.stringify(userFavorites))
+    var element = document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("itemTitle")[0]
+    element.getElementsByClassName("unfavorite")[0].setAttribute("onclick", `removeFavorite(${id})`);
+    element.getElementsByClassName("unfavorite")[0].classList.add("favorite");
+    element.getElementsByClassName("unfavorite")[0].classList.remove("unfavorite");
+    element.classList.add('favorite');
+    element.classList.remove('unfavorite');
+}
+function getFavorite(){
+    return JSON.parse(window.localStorage.getItem("userFavorites"))
+}
 function alternameFilterOptions(){
     if(document.getElementById(`searchTags`).style.display === "none"){
         document.getElementById(`searchTags`).style.display = "";
@@ -79,32 +102,50 @@ function getRandom(){
 function go(link){
     window.location = link;
 }
-function FindTags(id){
-    for (var typeID in database[id]["types"]) {
-        var type = database[id]["types"][typeID];
-        if(search_type.includes(`type-${type.toLowerCase()}`)){
-            document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="type-${type.toLowerCase()}" class='active-type' onclick="changeFilter(this)">${type}</button>`;
-        }else{
-            document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="type-${type.toLowerCase()}" class='inactive-type' onclick="changeFilter(this)">${type}</button>`;
+function getItemByID(id) {
+    for (var itemID in database){
+        if((`${database[itemID]["id"]}` === id || database[itemID]["id"] === id)){
+            return database[itemID];
         }
     }
-    for (var tagID in database[id]["tags"]) {
-        var tag = database[id]["tags"][tagID];
+    return null;
+}
+function FindTags(id){
+    var item = getItemByID(id);
+    var type = item["type"];
+    if(search_type.includes(`type-${type.toLowerCase()}`)){
+        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="type-${type.toLowerCase()}" class='active-type' onclick="changeFilter(this)">${type}</button>`;
+    }else{
+        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="type-${type.toLowerCase()}" class='inactive-type' onclick="changeFilter(this)">${type}</button>`;
+    }
+    for (var tagID in item["tags"]) {
+        var tag = item["tags"][tagID];
         if(search_tags.includes(`tag-${tag.toLowerCase().replaceAll(' ', '-')}`)){
-            document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='active-tag' onclick="changeFilter(this)">${tag}</button>`;
+            document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='active-tag' onclick="changeFilter(this)">${tag}</button>`;
         }else{
-            document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='inactive-tag' onclick="changeFilter(this)">${tag}</button>`;
+            document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='inactive-tag' onclick="changeFilter(this)">${tag}</button>`;
         }
     }
 }
-function FindUrls(id){
-    for (var linkID in database[id]["links"]) {
-        var link = database[id]["links"][linkID];
-        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("see-more")[0].innerHTML += `<button class="normal-tag" onclick="go('${link["url"]}')">${link["source"].replaceAll('(',"<b>").replaceAll(')', "</b>")}</button>`;
+function FindUrls(item){
+    for (var linkID in item["links"]) {
+        document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("see-more")[0].innerHTML += `<button class="normal-tag" onclick="go('${item["links"][linkID]["url"]}')">${item["links"][linkID]["source"]}</button>`;
     }
 }
 function changeFilter(button) {
-    if(button.getAttribute("class") === "tag-mode-all"){
+    if(button.getAttribute("class") === "active-account-tag"){
+        button.classList.remove("active-account-tag");
+        button.classList.add("inactive-account-tag");
+        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.add("inactive-account-tag");
+        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("active-account-tag");
+        search_favorites = false;
+    }else if(button.getAttribute("class") === "inactive-account-tag"){
+        button.classList.remove("inactive-account-tag");
+        button.classList.add("active-account-tag");
+        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.add("active-account-tag");
+        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("inactive-account-tag");
+        search_favorites = true;
+    }else if(button.getAttribute("class") === "tag-mode-all"){
         button.classList.remove("tag-mode-all");
         button.classList.add("tag-mode-some");
         button.innerText = "Modo limitado";
@@ -142,65 +183,64 @@ function changeFilter(button) {
     FindByName(document.getElementById("searchByName").value)
 }
 function FindByName(name){
-    document.getElementById(`container`).innerText = "";
+    document.getElementById(`container`).innerHTML = "";
     document.getElementById(`searchByName`).value = name;
-    name = name.toLowerCase();
-    
-    var splits = name.split(" ").filter(function(segment) {return segment !== "";});
-    name = splits.join(" ");
-    for (var itemID in database_ASC) {
-        var item = database_ASC[itemID]
-        var id = item["id"]
-        if(id === null){ return; }
-        var titles = [item["title"]].concat(Object.values(item["alternativeTitles"]));
-        for (var title in titles) {
-            var key = titles[title].toLowerCase();
-            var includeTag = false;
-            var includeType = false;
-            if(search_tag_mode === "all"){
-                includeTag = search_tags.every(function(tag) {
-                    return item["tags"].some(function(itemTag) {
-                        return itemTag.toLowerCase() === tag.split("tag-")[1].toLowerCase().replaceAll('-', ' ');
+    name = name.toLowerCase().split(" ").filter(function(segment) {return segment !== "";}).join(" ");
+    for (var itemID in database) {        
+        var item = database[itemID];
+        if ( item["id"] != null ) {  
+            var titles = [item["title"]].concat(Object.values(item["alternativeTitles"]));
+            for (var title in titles) {
+                var key = titles[title].toLowerCase();
+                var includeTag = false;
+                var includeType = false;
+                var isFavorite =  userFavorites.includes(item["id"]);
+                if(search_tag_mode === "all"){
+                    includeTag = search_tags.every(function(tag) {
+                        return item["tags"].some(function(itemTag) {
+                            return itemTag.toLowerCase() === tag.split("tag-")[1].toLowerCase().replaceAll('-', ' ');
+                        });
                     });
-                });
-            }else{
-                includeTag = item["tags"].some(function(tag) {
-                    return search_tags.includes(`tag-${tag.toLowerCase().replaceAll(' ', '-')}`);
-                });
-            }
-            includeType = item["types"].some(function(type) {
-                return search_type.includes(`type-${type.toLowerCase().replaceAll(' ', '-')}`);
-            });
-            if (
-                key.includes(name) && 
-                (search_type.length == 0 || includeType) && 
-                (search_tags.length == 0 || includeTag)
-            ) {
-                if(name != " "  && name != ''){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
-                var div = `
-                <div id="ID${id}_item" class="item">
-                    <img src="./assets/images/ID${id}.png">
-                    <div class="data">
-                        <p class="itemTitle">
-                            <span>${item["title"]}</span>
-                            <button class="${random(0,2) == 0 ? "favorite":"unfavorite"}"></button>
-                        </p>
-                        <div class="tags"><p>Tags: </p></div>
-                        <p class="itemSubTitle">Alternative Titles</p>
-                        <div class="alternativeTitles"></div>
-                        <p class="itemSubTitle">Sources</p>
-                        <div class="see-more"></div>
-                    </div>
-                </div>
-                `;
-                if(!document.getElementById(`ID${id}_item`)){
-                    document.getElementById("container").innerHTML += div;
-                    document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0];
-                    FindUrls(id);
-                    FindTags(id);
+                }else{
+                    includeTag = item["tags"].some(function(tag) {
+                        return search_tags.includes(`tag-${tag.toLowerCase().replaceAll(' ', '-')}`);
+                    });
                 }
-                if(document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("alternativeTitles")[0].childElementCount+1 <= 3){
-                    document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("alternativeTitles")[0].innerHTML += `<p class="itemAlternativeTitle">${key}</p>`;
+                includeType = search_type.includes(`type-${item["type"].toLowerCase().replaceAll(' ', '-')}`);
+                if (
+                    key.includes(name) && 
+                    (search_type.length == 0 || includeType) && 
+                    (search_tags.length == 0 || includeTag) &&
+                    (!search_favorites || (search_favorites && isFavorite ))
+                ) {
+                    if(name != " "  && name != ''){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
+                    var favoriteClass = userFavorites.includes(item["id"]) ? `favorite`: `unfavorite`;
+                    var favoriteFunction = favoriteClass == "favorite" ? `removeFavorite(${item["id"]})`: `addFavorite(${item["id"]})`;
+                    var div = `
+                        <div id="ID${item["id"]}_item" class="item">
+                            <img src="./assets/images/ID${item["id"]}.png">
+                            <div class="data">
+                                <p class="itemTitle ${favoriteClass}">
+                                    <span>${item["title"]}</span>
+                                    <button class="${favoriteClass}" onclick='${favoriteFunction}'></button>
+                                </p>
+                                <div class="tags"><p>Tags: </p></div>
+                                <p class="itemSubTitle">Alternative Titles</p>
+                                <div class="alternativeTitles"></div>
+                                <p class="itemSubTitle">Sources</p>
+                                <div class="see-more"></div>
+                            </div>
+                        </div>
+                    `;
+                    if(!document.getElementById(`ID${item["id"]}_item`)){
+                        document.getElementById("container").innerHTML += div;
+                        document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0];
+                        FindUrls(item);
+                        FindTags(item["id"]);
+                    }
+                    if(document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("alternativeTitles")[0].childElementCount+1 <= 3){
+                        document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("alternativeTitles")[0].innerHTML += `<p class="itemAlternativeTitle">${key}</p>`;
+                    }
                 }
             }
         }

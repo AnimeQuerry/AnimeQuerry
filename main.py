@@ -7,16 +7,17 @@ def verify(json_data):
             "id": item.get("id", 1),
             "title": item.get("title", ""),
             "alternativeTitles": item.get("alternativeTitles", []),
-            "type": item.get("type", ""),
-            "types": item.get("types", []),
+            "type": item.get("types", ""),
             "tags": item.get("tags", []),
-            "links": item.get("links", [])
+            "links": item.get("links", []),
+            "favorite": False
         }
         verificated.append(default)
+    verificated.sort(key=lambda x: x["title"])
     return verificated
 
 # Cargar el JSON desde el archivo
-with open("./assets/database.json", "r") as file:
+with open("./assets/database.json", "r", encoding="UTF-8") as file:
     data = json.load(file)
 
 # Agregar la clave "categories" si no está presente
