@@ -37,7 +37,7 @@ footer p{
   flex-direction: column;
   justify-content: center;
 }
-footer #visitsContainer {height: 36px;display: flex;flex-direction: column;align-items: center;}
+footer #visitsContainer {height: 39px;display: flex;flex-direction: column;align-items: center;}
 footer #visitsContainer div {height: 36px;width: fit-content;}
 footer #visitsContainer div a{display: block;width: fit-content;height: 36px;}
 footer #visitsContainer div a img{display: block;height: 36px;}

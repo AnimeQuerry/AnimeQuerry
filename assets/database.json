@@ -13,83 +13,24 @@
         ]
     },
     {
-        "id": 22,
-        "title": "30-sai made Doutei dato Mahoutsukai ni Nareru Rashii",
+        "id": 0,
+        "title": "Tsuki ga Michibiku Isekai Douchuu 1st Season",
         "alternativeTitles": [
-            "Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!"
+            "Tsukimichi -Moonlit Fantasy-",
+            "Tsukimichi: Moonlit Fantasy"
         ],
         "type": "Anime",
         "tags": [
-            "Comedia",
-            "Sobrenatural",
-            "Yaoi"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/30sai-made-doutei-dato-mahoutsukai-ni-nareru-rashii"
-            },
-            {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/30-sai-made-doutei-dato-mahoutsukai-ni-nareru-rashii"
-            }
-        ]
-    },
-    {
-        "id": 40,
-        "title": "Assesination Classroom 1st Season",
-        "alternativeTitles": [
-            "Ansatsu Kyoushitsu"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Accion",
-            "Comedia",
-            "Escolares",
-            "Shounen",
+            "Aventuras",
+            "Fantasia",
+            "Isekai",
+            "Magic",
             "Multi-Season"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/ansatsu-kyoushitsu-tv"
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "title": "Assesination Classroom: 365-nichi no Jikan",
-        "alternativeTitles": [
-            "Ansatsu Kyoushitsu: 365-nichi no Jikan"
-        ],
-        "type": "Film",
-        "tags": [
-            "Accion",
-            "Comedia",
-            "Escolares",
-            "Shounen"
-        ],
-        "links": [
-            {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan"
-            }
-        ]
-    },
-    {
-        "id": 19,
-        "title": "Beyblade X",
-        "alternativeTitles": [],
-        "type": "Anime",
-        "tags": [
-            "Aventuras",
-            "Accion",
-            "Deportes"
-        ],
-        "links": [
-            {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/beyblade-x"
+                "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu"
             }
         ]
     },
@@ -160,25 +101,203 @@
         ]
     },
     {
-        "id": 37,
-        "title": "Chiyu Mahou no Machigatta Tsukaikata",
+        "id": 4,
+        "title": "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
         "alternativeTitles": [
-            "The Wrong Way to Use Healing Magic"
+            "Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen"
+        ],
+        "type": "Anime",
+        "tags": [],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
+        "alternativeTitles": [
+            "I'm Doing My Best to Make Myself at Home in Another World, Mofunade"
+        ],
+        "type": "Anime",
+        "tags": [],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "The Foolish Angel Dances with the Devil",
+        "alternativeTitles": [
+            "Oroka na Tenshi wa Akuma to Odoru",
+            "The Foolish Angel Dances with Demons, Kanaten"
+        ],
+        "type": "Anime",
+        "tags": [],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/oroka-na-tenshi-wa-akuma-to-odoru"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Hokkaido Gals Are Super Adorable!",
+        "alternativeTitles": [
+            "Dosanko Gal wa Namara Menkoi"
         ],
         "type": "Anime",
         "tags": [
+            "Comedia",
+            "Escolares",
+            "Romance"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/dosanko-gal-wa-namara-menkoi"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Assesination Classroom: 365-nichi no Jikan",
+        "alternativeTitles": [
+            "Ansatsu Kyoushitsu: 365-nichi no Jikan"
+        ],
+        "type": "Film",
+        "tags": [
             "Accion",
+            "Comedia",
+            "Escolares",
+            "Shounen"
+        ],
+        "links": [
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Jaku-Chara Tomozaki-kun 1st Season",
+        "alternativeTitles": [
+            "Jakusha Character Tomozaki-kun, Bottom-tier Character Tomozaki",
+            "The Low Tier Character"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Drama",
+            "Escolares",
+            "Romance",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Jaku-Chara Tomozaki-kun 2nd Season",
+        "alternativeTitles": [
+            "Bottom-Tier Character Tomozaki 2nd Stage"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Drama",
+            "Escolares",
+            "Romance",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun-2nd-stage"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Ishura",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Aventuras",
+            "Fantasia"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ishura"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Gekai Elise",
+        "alternativeTitles": [
+            "Oegwauisa Elise, Doctor Elise: Queen with a Scalpel, Surgeon Elise",
+            "Doctor Elise: The Royal Lady with the Lamp"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Comedia",
             "Fantasia",
+            "Romance",
             "Isekai"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/chiyu-mahou-no-machigatta-tsukaikata"
-            },
+                "url": "https://www3.animeflv.net/anime/gekai-elise"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Himesama \"Goumon\" no Jikan desu",
+        "alternativeTitles": [
+            "It's Time for \"Interrogation\", Princess!, Hime-sama \"Goumon\" no Jikan desu",
+            "'Tis Time for \"Torture\", Princess"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Comedia",
+            "Fantasia",
+            "Shounen"
+        ],
+        "links": [
             {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/chiyu-mahou-no-machigatta-tsukaikata"
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/himesama-goumon-no-jikan-desu"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Kyuujitsu no Warumono-san",
+        "alternativeTitles": [
+            "Mr. Villain's Day Off"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Comedia"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/kyuujitsu-no-warumonosan"
             }
         ]
     },
@@ -247,190 +366,64 @@
         ]
     },
     {
-        "id": 26,
-        "title": "Dungeon Meshi",
+        "id": 18,
+        "title": "Tsuki ga Michibiku Isekai Douchuu 2nd Season",
         "alternativeTitles": [
-            "Dungeon Food",
-            "Delicious in Dungeon"
+            "Tsukimichi -Moonlit Fantasy- Season 2"
         ],
         "type": "Anime",
         "tags": [
+            "Accion",
+            "Aventuras",
             "Comedia",
             "Fantasia",
-            "Seinen",
-            "Comida"
+            "Isekai",
+            "Multi-Season"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/dungeon-meshi"
+                "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu-2nd-season"
             }
         ]
     },
     {
-        "id": 12,
-        "title": "Gekai Elise",
-        "alternativeTitles": [
-            "Oegwauisa Elise, Doctor Elise: Queen with a Scalpel, Surgeon Elise",
-            "Doctor Elise: The Royal Lady with the Lamp"
-        ],
+        "id": 19,
+        "title": "Beyblade X",
+        "alternativeTitles": [],
         "type": "Anime",
         "tags": [
-            "Comedia",
-            "Fantasia",
-            "Romance",
-            "Isekai"
+            "Aventuras",
+            "Accion",
+            "Deportes"
         ],
         "links": [
             {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/gekai-elise"
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/beyblade-x"
             }
         ]
     },
     {
-        "id": 27,
-        "title": "Gekkan Mousou Kagaku",
-        "alternativeTitles": [
-            "Delusional Monthly Magazine"
-        ],
+        "id": 20,
+        "title": "Sengoku Youko",
+        "alternativeTitles": [],
         "type": "Anime",
         "tags": [
-            "Fantasia"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/gekkan-mousou-kagaku"
-            }
-        ]
-    },
-    {
-        "id": 13,
-        "title": "Himesama \"Goumon\" no Jikan desu",
-        "alternativeTitles": [
-            "It's Time for \"Interrogation\", Princess!, Hime-sama \"Goumon\" no Jikan desu",
-            "'Tis Time for \"Torture\", Princess"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Comedia",
+            "Accion",
+            "Aventuras",
+            "Drama",
             "Fantasia",
             "Shounen"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/himesama-goumon-no-jikan-desu"
-            }
-        ]
-    },
-    {
-        "id": 7,
-        "title": "Hokkaido Gals Are Super Adorable!",
-        "alternativeTitles": [
-            "Dosanko Gal wa Namara Menkoi"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Comedia",
-            "Escolares",
-            "Romance"
-        ],
-        "links": [
+                "url": "https://www3.animeflv.net/anime/sengoku-youko"
+            },
             {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/dosanko-gal-wa-namara-menkoi"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "title": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
-        "alternativeTitles": [
-            "I'm Doing My Best to Make Myself at Home in Another World, Mofunade"
-        ],
-        "type": "Anime",
-        "tags": [],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu"
-            }
-        ]
-    },
-    {
-        "id": 11,
-        "title": "Ishura",
-        "alternativeTitles": [],
-        "type": "Anime",
-        "tags": [
-            "Accion",
-            "Aventuras",
-            "Fantasia"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/ishura"
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "title": "Jaku-Chara Tomozaki-kun 1st Season",
-        "alternativeTitles": [
-            "Jakusha Character Tomozaki-kun, Bottom-tier Character Tomozaki",
-            "The Low Tier Character"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Drama",
-            "Escolares",
-            "Romance",
-            "Multi-Season"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun"
-            }
-        ]
-    },
-    {
-        "id": 10,
-        "title": "Jaku-Chara Tomozaki-kun 2nd Season",
-        "alternativeTitles": [
-            "Bottom-Tier Character Tomozaki 2nd Stage"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Drama",
-            "Escolares",
-            "Romance",
-            "Multi-Season"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/jakuchara-tomozakikun-2nd-stage"
-            }
-        ]
-    },
-    {
-        "id": 14,
-        "title": "Kyuujitsu no Warumono-san",
-        "alternativeTitles": [
-            "Mr. Villain's Day Off"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Comedia"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/kyuujitsu-no-warumonosan"
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/sengoku-youko"
             }
         ]
     },
@@ -460,26 +453,65 @@
         ]
     },
     {
-        "id": 32,
-        "title": "Majo to Yajuu",
+        "id": 22,
+        "title": "30-sai made Doutei dato Mahoutsukai ni Nareru Rashii",
         "alternativeTitles": [
-            "Witch and the Beast",
-            "The Witch and the Beast"
+            "Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!"
         ],
         "type": "Anime",
         "tags": [
-            "Accion",
-            "Fantasia",
-            "Seinen"
+            "Comedia",
+            "Sobrenatural",
+            "Yaoi"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/majo-to-yajuu"
+                "url": "https://www3.animeflv.net/anime/30sai-made-doutei-dato-mahoutsukai-ni-nareru-rashii"
             },
             {
                 "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/majo-to-yajuu"
+                "url": "https://www1.otakustv.com/anime/30-sai-made-doutei-dato-mahoutsukai-ni-nareru-rashii"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Metallic Rouge",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Ciencia Ficcion"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/metallic-rouge"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/metallic-rouge"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Solo Leveling",
+        "alternativeTitles": [
+            "Ore dake Level Up na Ken",
+            "Na Honjaman Level Up, I Level Up Alone, \ub098 \ud63c\uc790\ub9cc \ub808\ubca8\uc5c5"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Aventuras",
+            "Fantasia"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ore-dake-level-up-na-ken"
             }
         ]
     },
@@ -506,45 +538,169 @@
         ]
     },
     {
-        "id": 23,
-        "title": "Metallic Rouge",
-        "alternativeTitles": [],
+        "id": 26,
+        "title": "Dungeon Meshi",
+        "alternativeTitles": [
+            "Dungeon Food",
+            "Delicious in Dungeon"
+        ],
         "type": "Anime",
         "tags": [
-            "Accion",
-            "Ciencia Ficcion"
+            "Comedia",
+            "Fantasia",
+            "Seinen",
+            "Comida"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/metallic-rouge"
-            },
-            {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/metallic-rouge"
+                "url": "https://www3.animeflv.net/anime/dungeon-meshi"
             }
         ]
     },
     {
-        "id": 38,
-        "title": "Momochi-san Chi no Ayakashi Ouji",
+        "id": 27,
+        "title": "Gekkan Mousou Kagaku",
         "alternativeTitles": [
-            "The Demon Prince of Momochi House"
+            "Delusional Monthly Magazine"
         ],
         "type": "Anime",
         "tags": [
-            "Fantasia",
-            "Romance",
-            "Shoujo"
+            "Fantasia"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/momochisan-chi-no-ayakashi-ouji"
+                "url": "https://www3.animeflv.net/anime/gekkan-mousou-kagaku"
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga",
+        "alternativeTitles": [
+            "The other world doesn't stand a chance against the power of instant death",
+            "My Instant Death Ability is So Overpowered, No One in This Other World Stands a Chance Against Me!"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Aventuras",
+            "Fantasia",
+            "Isekai"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/sokushi-cheat-ga-saikyou-sugite-isekai-no-yatsura-ga-marude-aite-ni-naranai-n-desu-ga"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Solo Leveling",
+        "alternativeTitles": [
+            "Ore dake Level Up na Ken",
+            "Na Honjaman Level Up, I Level Up Alone, \ub098 \ud63c\uc790\ub9cc \ub808\ubca8\uc5c5"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Aventuras",
+            "Fantasia"
+        ],
+        "links": [
+            {
+                "source": "TuMangaOnline",
+                "url": "https://visortmo.com/library/manhwa/217/solo-leveling"
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Yuuki Bakuhatsu Bang Bravern",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Ciencia Ficcion",
+            "Mecha",
+            "Militar"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/yuuki-bakuhatsu-bang-bravern"
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Urusei Yatsura (2022) 1st Season",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Ciencia Ficcion",
+            "Comedia",
+            "Romance",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/urusei-yatsura-2022"
             },
             {
                 "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/momochi-san-chi-no-ayakashi-ouji"
+                "url": "https://www1.otakustv.com/anime/urusei-yatsura-2022"
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Majo to Yajuu",
+        "alternativeTitles": [
+            "Witch and the Beast",
+            "The Witch and the Beast"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Fantasia",
+            "Seinen"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/majo-to-yajuu"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/majo-to-yajuu"
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Sasaki to Pii-chan",
+        "alternativeTitles": [
+            "Sasaki and Peeps"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Aventuras",
+            "Comedia",
+            "Fantasia",
+            "Isekai"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/sasaki-to-piichan"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/sasaki-to-pii-chan"
             }
         ]
     },
@@ -594,135 +750,6 @@
         ]
     },
     {
-        "id": 33,
-        "title": "Sasaki to Pii-chan",
-        "alternativeTitles": [
-            "Sasaki and Peeps"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Aventuras",
-            "Comedia",
-            "Fantasia",
-            "Isekai"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/sasaki-to-piichan"
-            },
-            {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/sasaki-to-pii-chan"
-            }
-        ]
-    },
-    {
-        "id": 20,
-        "title": "Sengoku Youko",
-        "alternativeTitles": [],
-        "type": "Anime",
-        "tags": [
-            "Accion",
-            "Aventuras",
-            "Drama",
-            "Fantasia",
-            "Shounen"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/sengoku-youko"
-            },
-            {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/sengoku-youko"
-            }
-        ]
-    },
-    {
-        "id": 41,
-        "title": "Snack Basue",
-        "alternativeTitles": [
-            "Ansatsu Kyoushitsu"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Comedia"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/snack-basue"
-            },
-            {
-                "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/snack-basue"
-            }
-        ]
-    },
-    {
-        "id": 28,
-        "title": "Sokushi Cheat ga Saikyou sugite, Isekai no Yatsura ga Marude Aite ni Naranai n desu ga",
-        "alternativeTitles": [
-            "The other world doesn't stand a chance against the power of instant death",
-            "My Instant Death Ability is So Overpowered, No One in This Other World Stands a Chance Against Me!"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Accion",
-            "Aventuras",
-            "Fantasia",
-            "Isekai"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/sokushi-cheat-ga-saikyou-sugite-isekai-no-yatsura-ga-marude-aite-ni-naranai-n-desu-ga"
-            }
-        ]
-    },
-    {
-        "id": 24,
-        "title": "Solo Leveling",
-        "alternativeTitles": [
-            "Ore dake Level Up na Ken",
-            "Na Honjaman Level Up, I Level Up Alone, \ub098 \ud63c\uc790\ub9cc \ub808\ubca8\uc5c5"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Accion",
-            "Aventuras",
-            "Fantasia"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/ore-dake-level-up-na-ken"
-            }
-        ]
-    },
-    {
-        "id": 29,
-        "title": "Solo Leveling",
-        "alternativeTitles": [
-            "Ore dake Level Up na Ken",
-            "Na Honjaman Level Up, I Level Up Alone, \ub098 \ud63c\uc790\ub9cc \ub808\ubca8\uc5c5"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Accion",
-            "Aventuras",
-            "Fantasia"
-        ],
-        "links": [
-            {
-                "source": "TuMangaOnline",
-                "url": "https://visortmo.com/library/manhwa/217/solo-leveling"
-            }
-        ]
-    },
-    {
         "id": 36,
         "title": "Sousou no Frieren",
         "alternativeTitles": [
@@ -748,84 +775,48 @@
         ]
     },
     {
-        "id": 6,
-        "title": "The Foolish Angel Dances with the Devil",
+        "id": 37,
+        "title": "Chiyu Mahou no Machigatta Tsukaikata",
         "alternativeTitles": [
-            "Oroka na Tenshi wa Akuma to Odoru",
-            "The Foolish Angel Dances with Demons, Kanaten"
-        ],
-        "type": "Anime",
-        "tags": [],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/oroka-na-tenshi-wa-akuma-to-odoru"
-            }
-        ]
-    },
-    {
-        "id": 0,
-        "title": "Tsuki ga Michibiku Isekai Douchuu 1st Season",
-        "alternativeTitles": [
-            "Tsukimichi -Moonlit Fantasy-",
-            "Tsukimichi: Moonlit Fantasy"
-        ],
-        "type": "Anime",
-        "tags": [
-            "Aventuras",
-            "Fantasia",
-            "Isekai",
-            "Magic",
-            "Multi-Season"
-        ],
-        "links": [
-            {
-                "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu"
-            }
-        ]
-    },
-    {
-        "id": 18,
-        "title": "Tsuki ga Michibiku Isekai Douchuu 2nd Season",
-        "alternativeTitles": [
-            "Tsukimichi -Moonlit Fantasy- Season 2"
+            "The Wrong Way to Use Healing Magic"
         ],
         "type": "Anime",
         "tags": [
             "Accion",
-            "Aventuras",
-            "Comedia",
             "Fantasia",
-            "Isekai",
-            "Multi-Season"
+            "Isekai"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu-2nd-season"
+                "url": "https://www3.animeflv.net/anime/chiyu-mahou-no-machigatta-tsukaikata"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/chiyu-mahou-no-machigatta-tsukaikata"
             }
         ]
     },
     {
-        "id": 31,
-        "title": "Urusei Yatsura (2022) 1st Season",
-        "alternativeTitles": [],
+        "id": 38,
+        "title": "Momochi-san Chi no Ayakashi Ouji",
+        "alternativeTitles": [
+            "The Demon Prince of Momochi House"
+        ],
         "type": "Anime",
         "tags": [
-            "Ciencia Ficcion",
-            "Comedia",
+            "Fantasia",
             "Romance",
-            "Multi-Season"
+            "Shoujo"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/urusei-yatsura-2022"
+                "url": "https://www3.animeflv.net/anime/momochisan-chi-no-ayakashi-ouji"
             },
             {
                 "source": "OtakusTV",
-                "url": "https://www1.otakustv.com/anime/urusei-yatsura-2022"
+                "url": "https://www1.otakustv.com/anime/momochi-san-chi-no-ayakashi-ouji"
             }
         ]
     },
@@ -852,35 +843,67 @@
         ]
     },
     {
-        "id": 4,
-        "title": "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
+        "id": 40,
+        "title": "Assesination Classroom 1st Season",
         "alternativeTitles": [
-            "Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen"
+            "Ansatsu Kyoushitsu"
         ],
         "type": "Anime",
-        "tags": [],
+        "tags": [
+            "Accion",
+            "Comedia",
+            "Escolares",
+            "Shounen",
+            "Multi-Season"
+        ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen"
+                "url": "https://www3.animeflv.net/anime/ansatsu-kyoushitsu-tv"
             }
         ]
     },
     {
-        "id": 30,
-        "title": "Yuuki Bakuhatsu Bang Bravern",
-        "alternativeTitles": [],
+        "id": 41,
+        "title": "Snack Basue",
+        "alternativeTitles": [
+            "Ansatsu Kyoushitsu"
+        ],
         "type": "Anime",
         "tags": [
-            "Accion",
-            "Ciencia Ficcion",
-            "Mecha",
-            "Militar"
+            "Comedia"
         ],
         "links": [
             {
                 "source": "AnimeFLV",
-                "url": "https://www3.animeflv.net/anime/yuuki-bakuhatsu-bang-bravern"
+                "url": "https://www3.animeflv.net/anime/snack-basue"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/snack-basue"
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "title": "Undead Unluck",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Comedia",
+            "Shounen",
+            "Sobrenatural",
+            "Superpoderes"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/undead-unluck"
+            },
+            {
+                "source": "OtakusTV",
+                "url": "https://www1.otakustv.com/anime/snack-basue"
             }
         ]
     }
