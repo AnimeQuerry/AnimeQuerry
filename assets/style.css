@@ -137,7 +137,7 @@ mark {
 .item .itemTitle .favorite {
     width: 18px;
     height: 18px;
-    background-image: url(/assets/images/star_full.png);
+    background-image: url(./assets/images/star_full.png);
     background-size: cover;
     border: 0;
     background-color: transparent;
@@ -147,7 +147,7 @@ mark {
 .item .itemTitle .unfavorite {
     width: 18px;
     height: 18px;
-    background-image: url(/assets/images/star_full.png);
+    background-image: url(./assets/images/star_full.png);
     background-size: cover;
     border: 0;
     background-color: transparent;
