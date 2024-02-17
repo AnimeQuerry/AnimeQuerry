@@ -36,51 +36,6 @@
         <button name="account-tag-por-ver" class="inactive-account-tag" onclick="changeFilter(this)">Por ver</button>
       </div>
     </div>
-    <h1>Editor de JSON</h1>
-    <button onclick="guardarCambios()">Guardar Cambios</button>
-    <div>
-        <textarea id="jsonEditor" rows="10" cols="50"></textarea>
-    </div>
-
-    <script>
-        // URL del JSON alojado en GitHub Pages
-        const jsonURL = "./assets/database.json";
-
-        // Función para cargar y mostrar el JSON en el editor
-        async function cargarJSON() {
-            try {
-                const response = await fetch(jsonURL);
-                const jsonData = await response.json();
-                document.getElementById("jsonEditor").value = JSON.stringify(jsonData, null, 4);
-            } catch (error) {
-                console.error("Error al cargar el JSON:", error);
-            }
-        }
-
-        // Función para guardar los cambios en el JSON
-        async function guardarCambios() {
-            try {
-                const nuevoJSON = JSON.parse(document.getElementById("jsonEditor").value);
-                const response = await fetch(jsonURL, {
-                    method: "PUT",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(nuevoJSON)
-                });
-                if (response.ok) {
-                    alert("Cambios guardados correctamente.");
-                } else {
-                    throw new Error("Error al guardar los cambios.");
-                }
-            } catch (error) {
-                console.error("Error al guardar los cambios:", error);
-            }
-        }
-
-        // Cargar el JSON al cargar la página
-        cargarJSON();
-    </script>
     <div id="container"></div>
     <div style="display: none;" id="comentaries">
       <div id="disqus_thread"></div>
