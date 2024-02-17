@@ -230,16 +230,13 @@ function changeFilter(button) {
     FindByName(document.getElementById("searchByName").value)
 }
 function FindByName(name){
-    document.getElementById(`container`).innerHTML = "";
+    //document.getElementById(`container`).innerHTML = "";
     document.getElementById(`searchByName`).value = name;
     name = name.toLowerCase().split(" ").filter(function(segment) {return segment !== "";}).join(" ");
     for (var itemID in database) {        
         var item = database[itemID];
         if ( item["id"] != null ) {  
             var titles = [item["title"]].concat(Object.values(item["alternativeTitles"]));
-            if(document.getElementById(`ID${item["id"]}_item`)) {
-                document.getElementById(`ID${item["id"]}_item`).getElementsByClassName(`alternativeTitles`)[0].innerHTML = ""
-            }
             for (var title in titles) {
                 var key = titles[title].toLowerCase();
                 var includeTag = false;
@@ -286,8 +283,8 @@ function FindByName(name){
                                     <button class="${favoriteClass}" onclick='${favoriteFunction}'></button>
                                 </p>
                                 <div class="tags"><p>Tags: </p></div>
-                                <p class="itemSubTitle">Alternative Titles</p>
-                                <div class="alternativeTitles"></div>
+                                <!--<p class="itemSubTitle">Alternative Titles</p>-->
+                                <!--<div class="alternativeTitles"></div>-->
                                 <p class="itemSubTitle">Sources</p>
                                 <div class="see-more"></div>
                             </div>
@@ -297,9 +294,6 @@ function FindByName(name){
                         document.getElementById("container").innerHTML += div;
                         FindUrls(item);
                         FindTags(item["id"]);
-                    }
-                    if(document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("alternativeTitles")[0].childElementCount+1 <= 3){
-                        document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("alternativeTitles")[0].innerHTML += `<p class="itemAlternativeTitle">${key}</p>`;
                     }
                 }
             }
