@@ -1,6 +1,6 @@
 var database = null;
-var database_TYPES = [ "Anime", "Film", "Manhwa", "Manga", "OVA", "Special" ]; database_TYPES.sort();
-var database_TAGS = [ "Multi-Season", "Isekai", "Accion", "Comedia", "Fantasia", "Escolares", "Romance", "Shounen", "Ecchi", "Aventuras", "Accion", "Sobrenatural", "Yaoi", "Yuri", "Drama", "Ciencia Ficcion", "Superpoderes", "Harem", "Comida"]; database_TAGS.sort()
+var database_TYPES = [ "Anime", "Film", "Manhwa", "Manga", "OVA", "Special" ].sort();
+var database_TAGS = [ "Deportes", "Multi-Season", "Isekai", "Comedia", "Fantasia", "Escolares", "Romance", "Shounen", "Ecchi", "Aventuras", "Accion", "Sobrenatural", "Yaoi", "Yuri", "Drama", "Ciencia Ficcion", "Superpoderes", "Harem", "Comida"].sort()
 var searchByNameOnly = false;
 var userFavorites = [];
 var userToSee = [];
@@ -127,26 +127,43 @@ function getItemByID(id) {
     }
     return null;
 }
-function FindTags(id){
-    var item = getItemByID(id);
-    var type = item["type"];
-    if(search_type.includes(`type-${type.toLowerCase()}`)){
-        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="type-${type.toLowerCase()}" class='active-type' onclick="changeFilter(this)">${type}</button>`;
+function FindTags(item){
+    var tagContainer = document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0];
+    var typeActive = search_type.includes(`type-${item["type"].toLowerCase()}`);
+    if(!tagContainer.innerText.includes(item["type"])){
+        tagContainer.innerHTML += `<button name="type-${item["type"].toLowerCase()}" class='${typeActive ? "active-type": "inactive-type"}' onclick="changeFilter(this)">${item["type"]}</button>`;
     }else{
-        document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="type-${type.toLowerCase()}" class='inactive-type' onclick="changeFilter(this)">${type}</button>`;
+        if(typeActive){
+            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.remove("inactive-type")
+            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.add("active-type")
+        }else{
+            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.remove("active-type")
+            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.add("inactive-type")
+        }
     }
     for (var tagID in item["tags"]) {
         var tag = item["tags"][tagID];
-        if(search_tags.includes(`tag-${tag.toLowerCase().replaceAll(' ', '-')}`)){
-            document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='active-tag' onclick="changeFilter(this)">${tag}</button>`;
+        var tagActive = search_tags.includes(`tag-${tag.toLowerCase().replaceAll(' ', '-')}`);
+        if(!tagContainer.innerText.includes(tag)){
+            tagContainer.innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='${tagActive ? "active-tag":"inactive-tag" }' onclick="changeFilter(this)">${tag}</button>`;
         }else{
-            document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0].innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='inactive-tag' onclick="changeFilter(this)">${tag}</button>`;
+            if(tagActive){
+                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("inactive-tag")
+                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.add("active-tag")
+            }else{
+                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("active-tag")
+                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.add("inactive-tag")
+            }
         }
     }
 }
 function FindUrls(item){
+    var urlContainer = document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("see-more")[0];
     for (var linkID in item["links"]) {
-        document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("see-more")[0].innerHTML += `<button class="normal-tag" onclick="go('${item["links"][linkID]["url"]}')">${item["links"][linkID]["source"]}</button>`;
+        var link = item["links"][linkID];
+        var url = link["url"];
+        var source = link["source"];
+        urlContainer.innerHTML += `<button class="normal-tag" onclick="go('${url}')">${source}</button>`;
     }
 }
 function changeFilter(button) {
@@ -230,7 +247,6 @@ function changeFilter(button) {
     FindByName(document.getElementById("searchByName").value)
 }
 function FindByName(name){
-    //document.getElementById(`container`).innerHTML = "";
     document.getElementById(`searchByName`).value = name;
     name = name.toLowerCase().split(" ").filter(function(segment) {return segment !== "";}).join(" ");
     for (var itemID in database) {        
@@ -264,7 +280,6 @@ function FindByName(name){
                             ))
                 ) {
                     if(name != " "  && name != ''){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
-                    
                     var seeClass = null;
                     var seeFunction = null;
                     if (userToSee.includes(item["id"]))  { seeClass = "to-see"; seeFunction = `addSeeing(${item["id"]})`; }
@@ -293,14 +308,19 @@ function FindByName(name){
                     if(!document.getElementById(`ID${item["id"]}_item`)){
                         document.getElementById("container").innerHTML += div;
                         FindUrls(item);
-                        FindTags(item["id"]);
+                        FindTags(item);
+                        break;
+                    }else{
+                        FindTags(item);
                     }
+                    document.getElementById(`ID${item["id"]}_item`).removeAttribute('style');
+                }else if(document.getElementById(`ID${item["id"]}_item`)) {
+                    document.getElementById(`ID${item["id"]}_item`).style.display = 'none';
                 }
             }
         }
     }
 }
-
 function addToSee(id){
     userToSee.push(id);
     window.localStorage.setItem("userToSee", JSON.stringify(userToSee))
