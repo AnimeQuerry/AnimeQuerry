@@ -1,6 +1,6 @@
 var database = null;
 var database_TYPES = [ "Anime", "Film", "Manhwa", "Manga", "OVA", "Special" ].sort();
-var database_TAGS = [ "Deportes", "Multi-Season", "Isekai", "Comedia", "Fantasia", "Escolares", "Romance", "Shounen", "Ecchi", "Aventuras", "Accion", "Sobrenatural", "Yaoi", "Yuri", "Drama", "Ciencia Ficcion", "Superpoderes", "Harem", "Comida"].sort()
+var database_TAGS = [ "Demonios", "Deportes", "Multi-Season", "Isekai", "Comedia", "Fantasia", "Escolares", "Romance", "Shounen", "Ecchi", "Aventuras", "Accion", "Sobrenatural", "Yaoi", "Yuri", "Drama", "Ciencia Ficcion", "Superpoderes", "Harem", "Comida"].sort()
 var searchByNameOnly = false;
 var userFavorites = [];
 var userToSee = [];
@@ -107,7 +107,7 @@ function random(min,max){
 function getRandom(){
     var random = database[Math.floor(Math.random() * database.length)];
     if(random["id"] === null ){ random = database[1]; console.log("null evitado")}
-    document.getElementById(`searchByName`).value = random["title"]
+    document.getElementById(`searchByName`).value = random["title"];
     searchByNameOnly = true;
     FindByName(random["title"])
     searchByNameOnly = false;
@@ -118,14 +118,6 @@ function go(link){
     }else{
         window.location = link;
     }
-}
-function getItemByID(id) {
-    for (var itemID in database){
-        if((`${database[itemID]["id"]}` === id || database[itemID]["id"] === id)){
-            return database[itemID];
-        }
-    }
-    return null;
 }
 function FindTags(item){
     var tagContainer = document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("tags")[0];
@@ -268,16 +260,14 @@ function FindByName(name){
                 }
                 if (
                     key.includes(name) && 
-                    (searchByNameOnly ||
-                        (
-
-                            (search_type.length == 0 || includeType) && 
-                            (search_tags.length == 0 || includeTag) &&
-                            (!search_favorites || (search_favorites && isFavorite)) &&
-                            (!search_toSee || (search_toSee && isToSee )) &&
-                            (!search_seeing || (search_seeing && isSeeing )) &&
-                            (!search_seen || (search_seen && isSeen ))
-                            ))
+                    (searchByNameOnly || (
+                        (search_type.length == 0 || includeType) && 
+                        (search_tags.length == 0 || includeTag) &&
+                        (!search_favorites || (search_favorites && isFavorite)) &&
+                        (!search_toSee || (search_toSee && isToSee )) &&
+                        (!search_seeing || (search_seeing && isSeeing )) &&
+                        (!search_seen || (search_seen && isSeen ))
+                    ))
                 ) {
                     if(name != " "  && name != ''){ key = key.replaceAll(name, `<mark>${name}</mark>`); }
                     var seeClass = null;

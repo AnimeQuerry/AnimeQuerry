@@ -32,10 +32,14 @@ header #right-col{
     max-width: fit-content;
 }
 footer p{
-  height: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  
+height: 16px;
+  
+display: flex;
+  
+flex-direction: column;
+  
+justify-content: center;
 }
 footer #visitsContainer {height: 39px;display: flex;flex-direction: column;align-items: center;}
 footer #visitsContainer div {height: 36px;width: fit-content;}
@@ -65,9 +69,10 @@ nav #filter-button{
   border-radius: 5px;
   border: 1px solid #ccc;
   margin: 8px;
+  min-width: 64px;
 }
 nav #searchByName {
-    width: calc(100% - 114px);
+    width: 100%;
     padding: 8px;
     font-size: 16px;
     border-radius: 5px;
@@ -129,6 +134,8 @@ mark {
   border-radius: 8px;
   display: flex;
   flex-direction: row;
+  max-width: 100%;
+  width: 512px;
 }
 .item .data {
   display: flex;

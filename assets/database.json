@@ -54,6 +54,91 @@
         ]
     },
     {
+        "id": 53,
+        "title": "Ao no Exorcist",
+        "alternativeTitles": [
+            "Blue Exorcist"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Demonios",
+            "Fantasia",
+            "Shounen",
+            "Sobrenatural",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ao-no-exorcist"
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "title": "Ao no Exorcist",
+        "alternativeTitles": [],
+        "type": "Film",
+        "tags": [
+            "Accion",
+            "Demonios",
+            "Fantasia",
+            "Shounen",
+            "Sobrenatural",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ao-no-exorcist-movie"
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "title": "Ao no Exorcist: Kyoto Fujouou-hen",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Demonios",
+            "Fantasia",
+            "Shounen",
+            "Sobrenatural",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ao-no-exorcist-kyoto-fujouou-hen"
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "title": "Ao no Exorcist: Shimane Illuminati-hen",
+        "alternativeTitles": [
+            "Blue Exorcist: Shimane Illuminati Saga",
+            "Ao no Futsumashi"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Demonios",
+            "Fantasia",
+            "Shounen",
+            "Sobrenatural",
+            "Multi-Season"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ao-no-exorcist-shimane-illuminatihen"
+            }
+        ]
+    },
+    {
         "id": 40,
         "title": "Assesination Classroom 1st Season",
         "alternativeTitles": [
@@ -174,6 +259,39 @@
             {
                 "source": "AnimeFLV",
                 "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-3rd-season"
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "title": "Boku no Kokoro no Yabai Yatsu",
+        "alternativeTitles": [
+            "Bokuyaba",
+            "The Dangers in My Heart"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Comedia",
+            "Escolares",
+            "Shounen"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/boku-no-kokoro-no-yabai-yatsu"
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "title": "Bucchigiri?!",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/bucchigiri"
             }
         ]
     },
@@ -570,6 +688,28 @@
         ]
     },
     {
+        "id": 52,
+        "title": "Mashle",
+        "alternativeTitles": [
+            "Mashle: Magic and Muscles"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Comedia",
+            "Escolares",
+            "Fantasia",
+            "Parodia",
+            "Shounen"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/mashle"
+            }
+        ]
+    },
+    {
         "id": 25,
         "title": "Mato Seihei no Slave",
         "alternativeTitles": [
@@ -677,6 +817,23 @@
         ]
     },
     {
+        "id": 51,
+        "title": "Ragna Crimson",
+        "alternativeTitles": [],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Fantasia",
+            "Shounen"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/ragna-crimson"
+            }
+        ]
+    },
+    {
         "id": 35,
         "title": "Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita",
         "alternativeTitles": [
@@ -695,6 +852,27 @@
             {
                 "source": "OtakusTV",
                 "url": "https://www1.otakustv.com/anime/saijaku-tamer-wa-gomi-hiroi-no-tabi-wo-hajimemashita"
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "title": "Saikyou Tank no Meikyuu Kouryaku",
+        "alternativeTitles": [
+            "The Strongest Tank's Labyrinth Raids: A Tank with a Rare 9999 Resistance Skill Got Kicked from the Hero's Party",
+            "The Strongest Tank's Labyrinth Raids",
+            "Saikyou Tank no Meikyuu Kouryaku: Tairyoku 9999 no Rare Skill-mochi Tank, Yuusha Party wo Tsuihou sareru"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Accion",
+            "Aventuras",
+            "Fantasia"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/saikyou-tank-no-meikyuu-kouryaku-tairyoku-9999-no-rare-skillmochi-tank-yuusha-party-wo-tsuihou-sarer"
             }
         ]
     },
@@ -880,7 +1058,6 @@
             "Aventuras",
             "Fantasia",
             "Isekai",
-            "Magic",
             "Multi-Season"
         ],
         "links": [
@@ -976,6 +1153,23 @@
             {
                 "source": "OtakusTV",
                 "url": "https://www1.otakustv.com/anime/urusei-yatsura-2022-2nd-season"
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "title": "Yubisaki to Renren",
+        "alternativeTitles": [
+            "A Sign of Affection"
+        ],
+        "type": "Anime",
+        "tags": [
+            "Romance"
+        ],
+        "links": [
+            {
+                "source": "AnimeFLV",
+                "url": "https://www3.animeflv.net/anime/yubisaki-to-renren"
             }
         ]
     },
