@@ -23,6 +23,10 @@ $(document).ready(function() {
             document.getElementById("searchTags").getElementsByTagName(`div`)[0].innerHTML += `<button name="type-${database_TYPES[type].toLowerCase().replaceAll(' ','-')}" class="inactive-type" onclick="changeFilter(this)">${database_TYPES[type]}</button>`;
         }
         database = data;
+        database.sort(function(a, b) {
+            return parseInt(a.id) - parseInt(b.id);
+        });
+        
         document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length-1} animes...`);
         var showAlert = false;
         var news = ``

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    .padd0 { padding-left:  0px;}
+    .padd1 { padding-left: 16px;}
+    .padd2 { padding-left: 32px;}
+    .padd3 { padding-left: 48px;}
+  </style>
+</head>
+<body style="display: flex;">
+  <div id="ids" style="width: 25%; height: 100vh; overflow: scroll;"></div>
+  <div id="json" style="width: 75%; height: 100vh; overflow: scroll;">
+    <p class="padd0">{</p>
+    <p class="padd1">  "id": <span id="jsonID">0</span>,</p>
+    <p class="padd1">  "title": "<input type="text" name="" id="jsonTitle">",</p>
+    <p class="padd1">  "alternativeTitles": [</p>
+    <p class="padd2">      "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord"</p>
+    <p class="padd1">  ],</p>
+    <p class="padd1">  "type": "<select>
+      <option value="Anime">Anime</option>
+      <option value="Film">Film</option>
+      <option value="Ova">Ova</option>
+      <option value="Manga">Manga</option>
+      <option value="Manhwa">Manhwa</option>
+      <option value="Special">Special</option>
+    </select>",</p>
+    <p class="padd1">  "tags": [ <input type="text" name="" value="" id="" oninput="validateTags(this)"></p>
+    <div id="tags">
+      <p class="padd2">      "Fantasia",</p>
+      <p class="padd2">      "Isekai"</p>
+    </div>
+    <p class="padd1">  ],</p>
+    <p class="padd1">  "links": [</p>
+    <p class="padd2">      {</p>
+    <p class="padd3">          "source": "AnimeFLV",</p>
+    <p class="padd3">          "url": "https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen"</p>
+    <p class="padd2">      }</p>
+    <p class="padd1">  ]</p>
+    <p class="padd0">}</p>
+  </div>
+</body>
+<script>
+  var database = null;
+  var selectedID = 0;
+  $(document).ready(function() {
+    $.getJSON('./assets/database.json', function(data) {
+      database = data
+      for(var itemID in database){
+        var item = database[itemID];
+        document.getElementById("ids").innerHTML += `<p><input type="radio" name="selectedId" id="" value="a" onclick="getJSON(${item["id"]})"> ID: ${item["id"]}</p>`;
+      }
+    });
+  });
+  function getJSON(id){
+    for(var itemID in database){
+      var item = database[itemID];
+      if(item["id"] === id){
+        selectedID = id;
+        document.getElementById("jsonId").innerText = id;
+        break;
+      }
+    }
+  }
+  function validateTags(input){
+    console.log(input.value.split(","))
+  }
+</script>
+</html>
