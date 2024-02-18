@@ -73,7 +73,7 @@ $(document).ready(function() {
             document.getElementById(`news-contain`).innerHTML += news;
             document.getElementById(`alert-page`).style.display = "flex";
         }
-        FindByName("")
+        FindByName("",true)
     })
 });
 function removeFavorite(id) {
@@ -241,11 +241,26 @@ function changeFilter(button) {
         document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.add("active-type");
         search_type.push(button.getAttribute("name"));
     }
-    FindByName(document.getElementById("searchByName").value)
+    var showAds = false;
+    if(
+        search_tags.length === 0 && 
+        search_type.length === 0 && 
+        !search_favorites &&
+        !search_toSee &&
+        !search_seeing &&
+        !search_seen
+        ){
+        showAds = true;
+    }
+    FindByName(document.getElementById("searchByName").value, showAds)
 }
-function FindByName(name){
+function FindByName(name, showAds){
     document.getElementById(`searchByName`).value = name;
     name = name.toLowerCase().split(" ").filter(function(segment) {return segment !== "";}).join(" ");
+    console.log(name === '')
+    if(name === '' && showAds){
+        showAds = true;
+    }
     for (var itemID in database) {        
         var item = database[itemID];
         if ( item["id"] != null ) {  
@@ -327,6 +342,16 @@ function FindByName(name){
                 }else if(document.getElementById(`ID${item["id"]}_item`)) {
                     document.getElementById(`ID${item["id"]}_item`).style.display = 'none';
                 }
+            }
+        }
+    }
+
+    for (var adsID in document.getElementById("container").getElementsByClassName('ads')){
+        if(adsID < document.getElementById("container").getElementsByClassName('ads').length){
+            if(showAds){
+                document.getElementById("container").getElementsByClassName('ads')[adsID].removeAttribute("style");
+            }else{
+                document.getElementById("container").getElementsByClassName('ads')[adsID].style.display = 'none';
             }
         }
     }
