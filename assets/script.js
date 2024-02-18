@@ -274,7 +274,11 @@ function FindByName(name, showAds){
                 var isSeeing = userSeeing.includes(item["id"]);
                 var isSeen = userSeen.includes(item["id"]);
                 if(search_tag_mode === "all"){
-                    includeTag = search_tags.every(function(tag) { return item["tags"].some(function(itemTag) { return itemTag.toLowerCase() === tag.split("tag-")[1].toLowerCase().replaceAll('-', ' '); }); });
+                    includeTag = search_tags.every(function(tag) { 
+                        return item["tags"].some(function(itemTag) { 
+                            return itemTag.toLowerCase() === ( tag != "tag-multi-season" ? tag.split("tag-")[1].toLowerCase().replaceAll('-', ' '): tag.split("tag-")[1].toLowerCase()); 
+                        });
+                    });
                 }else{
                     includeTag = item["tags"].some(function(tag) { return search_tags.includes(`tag-${tag.toLowerCase().replaceAll(' ', '-')}`); });
                 }
