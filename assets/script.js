@@ -304,6 +304,21 @@ function FindByName(name){
                         document.getElementById("container").innerHTML += div;
                         FindUrls(item);
                         FindTags(item);
+                        if(random(0,100) <= 5){
+                            document.getElementById("container").innerHTML += `
+                                <div class="item">
+                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7427566752180603" crossorigin="anonymous"></script>
+                                    <!-- item -->
+                                    <ins class="adsbygoogle"
+                                        style="display:block"
+                                        data-ad-client="ca-pub-7427566752180603"
+                                        data-ad-slot="3168558938"
+                                        data-ad-format="auto"
+                                        data-full-width-responsive="true"></ins>
+                                    <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+                                </div>
+                            `;
+                        }
                         break;
                     }else{
                         FindTags(item);

@@ -639,6 +639,13 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/shin-no-nakama-s2" }
         ]
+    }, { "id": 71, "title": "Hikari no Ou",
+        "alternativeTitles": [ ],
+        "type": "Anime",
+        "tags": [ "Fantasia" ],
+        "links": [
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/hikari-no-ou" }
+        ]
     }, { "id": null, "title": "",
         "alternativeTitles": [ ],
         "type": "Anime",

@@ -138,7 +138,9 @@ mark {
   display: flex;
   flex-direction: row;
   max-width: 100%;
-  width: 512px;
+  max-height: 248px;
+  height: 254px;
+  width: 504px;
 }
 .item .data {
   display: flex;
@@ -292,10 +294,10 @@ mark {
   border: 1px solid hsl(0, 0%, 25%);
   cursor: pointer;
 }
-@media screen and (min-width:  256px) { .item {width: calc(100% / 1);} }
-@media screen and (min-width:  768px) { .item {width: calc(100% / 2 - 6px);} }
-@media screen and (min-width: 1280px) { .item {width: calc(100% / 3 - 8px);} }
-@media screen and (min-width: 1792px) { .item {width: calc(100% / 4 - 9px);} }
+@media screen and (min-width:  256px) { .item {/* width: calc(100% / 1); */} }
+@media screen and (min-width:  768px) { .item {/* width: calc(100% / 2 - 6px); */} }
+@media screen and (min-width: 1280px) { .item {/* width: calc(100% / 3 - 8px); */} }
+@media screen and (min-width: 1792px) { .item {/* width: calc(100% / 4 - 9px); */} }
 
 /* ALERT CSS */
 #alert-page {
