@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+::-webkit-scrollbar{
+  display: none;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -147,6 +150,7 @@ mark {
 .item img {
   width: 179px;
   height: auto;
+  cursor: zoom-in;
 }
 .item .itemTitle {
   padding: 8px;
@@ -183,6 +187,7 @@ mark {
     background-color: transparent;
     filter: hue-rotate(180deg) brightness(200%);
     background-repeat: round;
+    cursor: pointer;
 }
 .item .itemTitle .to-see {
     width: 18px;
@@ -225,6 +230,7 @@ mark {
     background-color: transparent;
     filter: hue-rotate(60deg) contrast(0);
     background-repeat: round;
+    cursor: pointer;
 }
 .item .itemSubTitle {
   font-weight: bold;
@@ -284,6 +290,7 @@ mark {
 .inactive-tag, .inactive-type, .inactive-account-tag {
   background-color: rgb(192, 192, 192);
   border: 1px solid hsl(0, 0%, 25%);
+  cursor: pointer;
 }
 @media screen and (min-width:  256px) { .item {width: calc(100% / 1);} }
 @media screen and (min-width:  768px) { .item {width: calc(100% / 2 - 6px);} }
@@ -301,4 +308,23 @@ mark {
   background-color: rgba(0,0,0,0.25);
   align-items: center;
   justify-content: center;
+}
+#img-page {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.25);
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+#img-page .img{
+    width: calc(100vw - 16px);
+    height: calc(100vh - 16px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }

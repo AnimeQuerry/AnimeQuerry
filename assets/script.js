@@ -1,4 +1,4 @@
-var database = null;
+var database = [];
 var database_TYPES = [ "Anime", "Film", "Manhwa", "Manga", "OVA", "Special" ].sort();
 var database_TAGS = [ "Demonios", "Deportes", "Multi-Season", "Isekai", "Comedia", "Fantasia", "Escolares", "Romance", "Shounen", "Ecchi", "Aventuras", "Accion", "Sobrenatural", "Yaoi", "Yuri", "Drama", "Ciencia Ficcion", "Superpoderes", "Harem", "Comida"].sort()
 var searchByNameOnly = false;
@@ -16,16 +16,17 @@ var search_seeing = false;
 var search_seen = false;
 $(document).ready(function() {
     $.getJSON('./assets/database.json', function(data) {
+        
+        data.sort(function(a, b) {
+            return a["title"].localeCompare(b["title"]);
+        });
+        database = data.slice();
         for(const tag in database_TAGS) {
             document.getElementById("searchTags").getElementsByTagName(`div`)[1].innerHTML += `<button name="tag-${database_TAGS[tag].toLowerCase().replaceAll(' ','-')}" class="inactive-tag" onclick="changeFilter(this)">${database_TAGS[tag]}</button>`;
         }
         for(const type in database_TYPES) {
             document.getElementById("searchTags").getElementsByTagName(`div`)[0].innerHTML += `<button name="type-${database_TYPES[type].toLowerCase().replaceAll(' ','-')}" class="inactive-type" onclick="changeFilter(this)">${database_TYPES[type]}</button>`;
         }
-        database = data;
-        database.sort(function(a, b) {
-            return parseInt(a.id) - parseInt(b.id);
-        });
         
         document.getElementById(`searchByName`).setAttribute("placeholder", `Busca entre ${database.length-1} animes...`);
         var showAlert = false;
@@ -283,8 +284,8 @@ function FindByName(name){
                     var favoriteClass = userFavorites.includes(item["id"]) ? `favorite`: `unfavorite`;
                     var favoriteFunction = favoriteClass == "favorite" ? `removeFavorite(${item["id"]})`: `addFavorite(${item["id"]})`;
                     var div = `
-                        <div id="ID${item["id"]}_item" class="item">
-                            <img src="./assets/images/ID${item["id"]}.png">
+                        <div name="${item["title"]}" id="ID${item["id"]}_item" class="item">
+                            <img src="./assets/images/ID${item["id"]}.png" onclick="showImage(this.src)">
                             <div class="data">
                                 <p class="itemTitle ${favoriteClass}">
                                     <span>${item["title"]}</span>
@@ -360,4 +361,8 @@ function removeSeen(id){
     if(search_seen){
         document.getElementById(`ID${id}_item`).remove();
     }
+}
+function showImage(src){
+    document.getElementById("img-page").getElementsByClassName("img")[0].style.backgroundImage = `url('${src}')`;
+    document.getElementById("img-page").style.display = "flex";
 }
