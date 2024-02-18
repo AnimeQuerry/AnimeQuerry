@@ -646,6 +646,16 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/hikari-no-ou" }
         ]
+    }, { "id": 72, "title": "Vivy: Fluorite Eye's Song",
+        "alternativeTitles": [ 
+            "Vivy -Fluorite Eye's Song-"
+        ],
+        "type": "Anime",
+        "tags": [ "Accion", "Ciencia Ficcion", "Musica", "Suspenso" ],
+        "links": [
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/vivy-fluorite-eyes-song" },
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/vivy-fluorite-eyes-song" }
+        ]
     }, { "id": null, "title": "",
         "alternativeTitles": [ ],
         "type": "Anime",

@@ -306,7 +306,7 @@ function FindByName(name){
                         FindTags(item);
                         if(random(0,100) <= 5){
                             document.getElementById("container").innerHTML += `
-                                <div class="item">
+                                <div class="item ads">
                                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7427566752180603" crossorigin="anonymous"></script>
                                     <!-- item -->
                                     <ins class="adsbygoogle"
