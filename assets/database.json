@@ -1,5 +1,5 @@
 [
-       { "id": 1, "title": "Boku No Hero Academia 1st Season",
+       { "id":  1, "title": "Boku No Hero Academia 1st Season",
         "alternativeTitles": [
             "My Hero Academia",
             "Boku No Hero Academia"
@@ -9,7 +9,7 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2016" }
         ]
-    }, { "id": 2, "title": "Boku No Hero Academia 2nd Season",
+    }, { "id":  2, "title": "Boku No Hero Academia 2nd Season",
         "alternativeTitles": [
             "My Hero Academia 2nd Season",
             "Boku No Hero Academia 2"
@@ -19,7 +19,7 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-2nd-season" }
         ]
-    }, { "id": 3, "title": "Boku No Hero Academia 3rd Season",
+    }, { "id":  3, "title": "Boku No Hero Academia 3rd Season",
         "alternativeTitles": [
             "My Hero Academia 3rd Season",
             "Boku No Hero Academia 3"
@@ -29,33 +29,25 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/boku-no-hero-academia-3rd-season" }
         ]
-    }, { "id": 4, "title": "Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen",
+    }, { "id":  4, "title": "Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen",
         "alternativeTitles": [
             "Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord"
         ],
         "type": "Anime",
-        "tags": [
-            "Fantasia",
-            "Isekai"
-        ],
+        "tags": [ "Fantasia", "Isekai" ],
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/akuyaku-reijou-level-99-watashi-wa-uraboss-desu-ga-maou-dewa-arimasen" }
         ]
-    }, { "id": 5, "title": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
+    }, { "id":  5, "title": "Isekai de Mofumofu Nadenade suru Tame ni Ganbattemasu.",
         "alternativeTitles": [
             "I'm Doing My Best to Make Myself at Home in Another World, Mofunade"
         ],
         "type": "Anime",
-        "tags": [
-            "Aventuras",
-            "Fantasia",
-            "Isekai",
-            "Recuentos de la vida"
-        ],
+        "tags": [ "Aventuras", "Fantasia", "Isekai", "Recuentos de la vida" ],
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/isekai-de-mofumofu-nadenade-suru-tame-ni-ganbattemasu" }
         ]
-    }, { "id": 6, "title": "The Foolish Angel Dances with the Devil",
+    }, { "id":  6, "title": "The Foolish Angel Dances with the Devil",
         "alternativeTitles": [
             "Oroka na Tenshi wa Akuma to Odoru",
             "The Foolish Angel Dances with Demons, Kanaten"
@@ -65,7 +57,7 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/oroka-na-tenshi-wa-akuma-to-odoru" }
         ]
-    }, { "id": 7, "title": "Hokkaido Gals Are Super Adorable!",
+    }, { "id":  7, "title": "Hokkaido Gals Are Super Adorable!",
         "alternativeTitles": [
             "Dosanko Gal wa Namara Menkoi"
         ],
@@ -74,7 +66,7 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/dosanko-gal-wa-namara-menkoi" }
         ]
-    }, { "id": 8, "title": "Assesination Classroom: 365-nichi no Jikan",
+    }, { "id":  8, "title": "Assesination Classroom: 365-nichi no Jikan",
         "alternativeTitles": [
             "Ansatsu Kyoushitsu: 365-nichi no Jikan"
         ],
@@ -83,7 +75,7 @@
         "links": [
             { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/ansatsu-kyoushitsu-365-nichi-no-jikan" }
         ]
-    }, { "id": 9, "title": "Jaku-Chara Tomozaki-kun 1st Season",
+    }, { "id":  9, "title": "Jaku-Chara Tomozaki-kun 1st Season",
         "alternativeTitles": [
             "Jakusha Character Tomozaki-kun, Bottom-tier Character Tomozaki",
             "The Low Tier Character"
@@ -666,6 +658,20 @@
         "tags": [ "Accion", "Comedia", "Escolares", "Shounen", "Multi-Season" ],
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/ansatsu-kyoushitsu-tv-2nd-season" }
+        ]
+    }, { "id": 75, "title": "High Card",
+        "alternativeTitles": [ "" ],
+        "type": "Anime",
+        "tags": ["Accion", "Superpoderes" ],
+        "links": [
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/high-card" }
+        ]
+    }, { "id": 76, "title": "Synduality: Noir",
+        "alternativeTitles": [ "SYNDUALITY" ],
+        "type": "Anime",
+        "tags": [ "Ciencia Ficcion" ],
+        "links": [
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/synduality-noir" }
         ]
     }, { "id": null, "title": "",
         "alternativeTitles": [ "" ],
