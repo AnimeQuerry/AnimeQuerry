@@ -166,7 +166,8 @@
         "type": "Anime",
         "tags": [ "Accion", "Aventuras", "Comedia", "Fantasia", "Isekai", "Multi-Season" ],
         "links": [
-            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu-2nd-season" }
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/tsuki-ga-michibiku-isekai-douchuu-2nd-season" },
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/tsuki-ga-michibiku-isekai-douchuu-2nd-season" }
         ]
     }, { "id": 19, "title": "Beyblade X",
         "alternativeTitles": [ "" ],
@@ -659,19 +660,21 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/ansatsu-kyoushitsu-tv-2nd-season" }
         ]
-    }, { "id": 75, "title": "High Card",
+    }, { "id": 75, "title": "High Card 1st Season",
         "alternativeTitles": [ "" ],
         "type": "Anime",
-        "tags": ["Accion", "Superpoderes" ],
+        "tags": ["Accion", "Superpoderes", "Multi-Season" ],
         "links": [
-            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/high-card" }
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/high-card" },
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/high-card" }
         ]
     }, { "id": 76, "title": "Synduality: Noir",
         "alternativeTitles": [ "SYNDUALITY" ],
         "type": "Anime",
         "tags": [ "Ciencia Ficcion" ],
         "links": [
-            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/synduality-noir" }
+            { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/synduality-noir" },
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/synduality-noir" }
         ]
     }, { "id": 77, "title": "The Daily Life of the Immortal King 1st Season",
         "alternativeTitles": [ "Xian Wang de Richang Shenghuo" ],
@@ -700,6 +703,13 @@
         "tags": [ "Aventura", "Fantasia", "Demonios", "Comedia", "Recuentos de la vida", "Escolares", "Multi-Season" ],
         "links": [
             { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/xian-wang-de-richang-shenghuo-4" }
+        ]
+    }, { "id": 81, "title": "High Card 2nd Season",
+        "alternativeTitles": [ "" ],
+        "type": "Anime",
+        "tags": [ "Accion", "Fantasia", "Multi-Season" ],
+        "links": [
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/high-card-season-2" }
         ]
     }, { "id": null, "title": "",
         "alternativeTitles": [ "" ],
