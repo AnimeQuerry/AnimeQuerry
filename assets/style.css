@@ -139,7 +139,7 @@ mark {
   flex-direction: row;
   max-width: 100%;
   max-height: 248px;
-  height: 254px;
+  /* height: 254px; */
   width: 504px;
 }
 .item .data {
@@ -147,12 +147,13 @@ mark {
   flex-direction: column;
   gap: 8px;
   padding-bottom: 8px;
-  width: calc(100% - 179px);
+  width: 100%;
 }
 .item img {
   width: 179px;
   height: auto;
   cursor: zoom-in;
+  max-width: 30%;
 }
 .item .itemTitle {
   padding: 8px;

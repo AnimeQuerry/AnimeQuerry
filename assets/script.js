@@ -73,6 +73,7 @@ $(document).ready(function() {
             document.getElementById(`news-contain`).innerHTML += news;
             document.getElementById(`alert-page`).style.display = "flex";
         }
+        console.log(database)
         FindByName("",true)
     })
 });
@@ -259,12 +260,17 @@ function FindByName(name, showAds){
     name = name.toLowerCase().split(" ").filter(function(segment) {return segment !== "";}).join(" ");
     console.log(name === '')
     if(name === '' && showAds){
-        showAds = true;
+        if(searchByNameOnly){
+            showAds = false;
+        }else{
+            showAds = true;
+        }
     }
     for (var itemID in database) {        
         var item = database[itemID];
-        if ( item["id"] != null ) {  
+        if ( item["id"] != null ) {
             var titles = [item["title"]].concat(Object.values(item["alternativeTitles"]));
+            console.log(titles)
             for (var title in titles) {
                 var key = titles[title].toLowerCase();
                 var includeTag = false;
@@ -323,7 +329,7 @@ function FindByName(name, showAds){
                         document.getElementById("container").innerHTML += div;
                         FindUrls(item);
                         FindTags(item);
-                        if(random(0,100) <= 5){
+                        if(random(0, 100) <= 1){
                             document.getElementById("container").innerHTML += `
                                 <div class="item ads">
                                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7427566752180603" crossorigin="anonymous"></script>
@@ -341,8 +347,9 @@ function FindByName(name, showAds){
                         break;
                     }else{
                         FindTags(item);
+                        document.getElementById(`ID${item["id"]}_item`).removeAttribute('style');
+                        break;
                     }
-                    document.getElementById(`ID${item["id"]}_item`).removeAttribute('style');
                 }else if(document.getElementById(`ID${item["id"]}_item`)) {
                     document.getElementById(`ID${item["id"]}_item`).style.display = 'none';
                 }
