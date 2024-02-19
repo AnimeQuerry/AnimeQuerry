@@ -673,6 +673,34 @@
         "links": [
             { "source": "AnimeFLV", "url": "https://www3.animeflv.net/anime/synduality-noir" }
         ]
+    }, { "id": 77, "title": "The Daily Life of the Immortal King 1st Season",
+        "alternativeTitles": [ "Xian Wang de Richang Shenghuo" ],
+        "type": "Donghua",
+        "tags": [ "Aventura", "Fantasia", "Demonios", "Comedia", "Recuentos de la vida", "Escolares", "Multi-Season" ],
+        "links": [
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/xian-wang-de-richang-shenghuo" }
+        ]
+    }, { "id": 78, "title": "The Daily Life of the Immortal King 2nd Season",
+        "alternativeTitles": [ "Xian Wang de Richang Shenghuo 2" ],
+        "type": "Donghua",
+        "tags": [ "Aventura", "Fantasia", "Demonios", "Comedia", "Recuentos de la vida", "Escolares", "Multi-Season" ],
+        "links": [
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/xian-wang-de-richang-shenghuo-2" }
+        ]
+    }, { "id": 79, "title": "The Daily Life of the Immortal King 3rd Season",
+        "alternativeTitles": [ "Xian Wang de Richang Shenghuo 3" ],
+        "type": "Donghua",
+        "tags": [ "Aventura", "Fantasia", "Demonios", "Comedia", "Recuentos de la vida", "Escolares", "Multi-Season" ],
+        "links": [
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/xian-wang-de-richang-shenghuo-3" }
+        ]
+    }, { "id": 80, "title": "The Daily Life of the Immortal King 4th Season",
+        "alternativeTitles": [ "Xian Wang de Richang Shenghuo 4" ],
+        "type": "Donghua",
+        "tags": [ "Aventura", "Fantasia", "Demonios", "Comedia", "Recuentos de la vida", "Escolares", "Multi-Season" ],
+        "links": [
+            { "source": "OtakusTV", "url": "https://www1.otakustv.com/anime/xian-wang-de-richang-shenghuo-4" }
+        ]
     }, { "id": null, "title": "",
         "alternativeTitles": [ "" ],
         "type": "Anime",

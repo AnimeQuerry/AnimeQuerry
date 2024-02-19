@@ -1,5 +1,5 @@
 var database = [];
-var database_TYPES = [ "Anime", "Film", "Manhwa", "Manga", "OVA", "Special" ].sort();
+var database_TYPES = [ "Anime", "Donghua", "Film", "Manhwa", "Manga", "OVA", "Special" ].sort();
 var database_TAGS = [ "Demonios", "Deportes", "Multi-Season", "Isekai", "Comedia", "Fantasia", "Escolares", "Romance", "Shounen", "Ecchi", "Aventuras", "Accion", "Sobrenatural", "Yaoi", "Yuri", "Drama", "Ciencia Ficcion", "Superpoderes", "Harem", "Comida"].sort()
 var searchByNameOnly = false;
 var userFavorites = [];
