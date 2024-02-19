@@ -73,7 +73,6 @@ $(document).ready(function() {
             document.getElementById(`news-contain`).innerHTML += news;
             document.getElementById(`alert-page`).style.display = "flex";
         }
-        console.log(database)
         FindByName("",true)
     })
 });
@@ -112,7 +111,7 @@ function random(min,max){
 }
 function getRandom(){
     var random = database[Math.floor(Math.random() * database.length)];
-    if(random["id"] === null ){ random = database[1]; console.log("null evitado")}
+    if(random["id"] === null ){ random = database[1];}
     document.getElementById(`searchByName`).value = random["title"];
     searchByNameOnly = true;
     FindByName(random["title"])
@@ -258,7 +257,6 @@ function changeFilter(button) {
 function FindByName(name, showAds){
     document.getElementById(`searchByName`).value = name;
     name = name.toLowerCase().split(" ").filter(function(segment) {return segment !== "";}).join(" ");
-    console.log(name === '')
     if(name === '' && showAds){
         if(searchByNameOnly){
             showAds = false;
@@ -270,7 +268,6 @@ function FindByName(name, showAds){
         var item = database[itemID];
         if ( item["id"] != null ) {
             var titles = [item["title"]].concat(Object.values(item["alternativeTitles"]));
-            console.log(titles)
             for (var title in titles) {
                 var key = titles[title].toLowerCase();
                 var includeTag = false;
