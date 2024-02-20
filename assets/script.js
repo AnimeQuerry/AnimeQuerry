@@ -16,10 +16,7 @@ var search_seeing = false;
 var search_seen = false;
 $(document).ready(function() {
     $.getJSON('./assets/database.json', function(data) {
-        
-        data.sort(function(a, b) {
-            return a["title"].localeCompare(b["title"]);
-        });
+        data.sort(function(a, b) { return a["title"].localeCompare(b["title"]); });
         database = data.slice();
         for(const tag in database_TAGS) {
             document.getElementById("searchTags").getElementsByTagName(`div`)[1].innerHTML += `<button name="tag-${database_TAGS[tag].toLowerCase().replaceAll(' ','-')}" class="inactive-tag" onclick="changeFilter(this)">${database_TAGS[tag]}</button>`;
@@ -42,30 +39,21 @@ $(document).ready(function() {
         userToSee = JSON.parse(window.localStorage.getItem("userToSee"));
         userSeeing = JSON.parse(window.localStorage.getItem("userSeeing"));
         userSeen = JSON.parse(window.localStorage.getItem("userSeen"));
-        if(window.localStorage.getItem("lastAnimeCount") != database.length-1){
+        if(window.localStorage.getItem("lastAnimeCount") != database.length - 1){
             var amount = database.length-1-window.localStorage.getItem("lastAnimeCount");
-                 if (amount ==  1) { news += `<li>Hemos añadido ${Math.abs(amount)} anime en nuestra base de datos</li>`;}
-            else if (amount >   1) { news += `<li>Hemos añadido ${Math.abs(amount)} animes en nuestra base de datos</li>`;}
-            else if (amount == -1) { news += `<li>Hemos eliminado ${Math.abs(amount)} anime de nuestra base de datos</li>`;}
-            else if (amount <   1) { news += `<li>Hemos eliminado ${Math.abs(amount)} animes de nuestra base de datos</li>`;}
+            news += `<li>Hemos ${ amount > 0 ? "añadido": "eliminado"} ${Math.abs(amount)} ${Math.abs(amount) == 1 ? "anime": "animes" } en nuestra base de datos.</li>`;
             showAlert = true;
             window.localStorage.setItem("lastAnimeCount", database.length-1);
         }
         if(window.localStorage.getItem("lastTagsCount") != database_TAGS.length){
             var amount = database_TAGS.length-window.localStorage.getItem("lastTagsCount");
-            if (amount ==  1) { news += `<li>Hemos añadido ${Math.abs(amount)} etiqueta en nuestro filtro</li>`;}
-            else if (amount >   1) { news += `<li>Hemos añadido ${Math.abs(amount)} etiquetas en nuestro filtro</li>`;}
-            else if (amount == -1) { news += `<li>Hemos eliminado ${Math.abs(amount)} etiqueta de nuestro filtro</li>`;}
-            else if (amount <   1) { news += `<li>Hemos eliminado ${Math.abs(amount)} etiquetas de nuestro filtro</li>`;}
+            news += `<li>Hemos ${ amount > 0 ? "añadido": "eliminado"} ${Math.abs(amount)} ${Math.abs(amount) == 1 ? "etiqueta": "etiquetas" } en nuestro filtro.</li>`;
             showAlert = true;
             window.localStorage.setItem("lastTagsCount", database_TAGS.length);
         }
         if(window.localStorage.getItem("lastTypesCount") != database_TYPES.length){
             var amount = database_TYPES.length-window.localStorage.getItem("lastTypesCount");
-            if (amount ==  1) { news += `<li>Hemos añadido ${Math.abs(amount)} tipo en nuestro filtro</li>`;}
-            else if (amount >   1) { news += `<li>Hemos añadido ${Math.abs(amount)} tipos en nuestro filtro</li>`;}
-            else if (amount == -1) { news += `<li>Hemos eliminado ${Math.abs(amount)} tipo de nuestro filtro</li>`;}
-            else if (amount <   1) { news += `<li>Hemos eliminado ${Math.abs(amount)} tipos de nuestro filtro</li>`;}
+            news += `<li>Hemos ${ amount > 0 ? "añadido": "eliminado"} ${Math.abs(amount)} ${Math.abs(amount) == 1 ? "tipo": "tipos" } en nuestro filtro.</li>`;
             showAlert = true;
             window.localStorage.setItem("lastTypesCount", database_TYPES.length);
         }
@@ -73,7 +61,7 @@ $(document).ready(function() {
             document.getElementById(`news-contain`).innerHTML += news;
             document.getElementById(`alert-page`).style.display = "flex";
         }
-        FindByName("",true)
+        FindByName("", true)
     })
 });
 function removeFavorite(id) {
@@ -81,12 +69,11 @@ function removeFavorite(id) {
     window.localStorage.setItem("userFavorites", JSON.stringify(userFavorites))
     var element = document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("itemTitle")[0]
     element.getElementsByClassName("favorite")[0].setAttribute("onclick", `addFavorite(${id})`);
-    element.getElementsByClassName("favorite")[0].classList.add("unfavorite");
-    element.getElementsByClassName("favorite")[0].classList.remove("favorite");
+    element.getElementsByClassName("favorite")[0].classList.replace("favorite","unfavorite");
     element.classList.add('unfavorite');
     element.classList.remove('favorite');
     if(search_favorites){
-        document.getElementById(`ID${id}_item`).remove();
+        document.getElementById(`ID${id}_item`).style.display = "none";
     }
 }
 function addFavorite(id){
@@ -106,15 +93,15 @@ function alternameFilterOptions(){
         document.getElementById(`searchTags`).style.display = "none";
     }
 }
-function random(min,max){
+function random(max){
     return Math.floor(Math.random() * max)
 }
 function getRandom(){
-    var random = database[Math.floor(Math.random() * database.length)];
-    if(random["id"] === null ){ random = database[1];}
-    document.getElementById(`searchByName`).value = random["title"];
+    var item = database[random(database.length)];
+    if(item["id"] === null ){ item = database[1];}
+    document.getElementById(`searchByName`).value = item["title"];
     searchByNameOnly = true;
-    FindByName(random["title"])
+    FindByName(item["title"], false)
     searchByNameOnly = false;
 }
 function go(link){
@@ -131,11 +118,9 @@ function FindTags(item){
         tagContainer.innerHTML += `<button name="type-${item["type"].toLowerCase()}" class='${typeActive ? "active-type": "inactive-type"}' onclick="changeFilter(this)">${item["type"]}</button>`;
     }else{
         if(typeActive){
-            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.remove("inactive-type")
-            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.add("active-type")
+            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.replace("inactive-type", "active-type")
         }else{
-            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.remove("active-type")
-            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.add("inactive-type")
+            tagContainer.querySelector(`button[name='type-${item["type"].toLowerCase()}']`).classList.replace("active-type", "inactive-type")
         }
     }
     for (var tagID in item["tags"]) {
@@ -145,11 +130,9 @@ function FindTags(item){
             tagContainer.innerHTML += `<button name="tag-${tag.toLowerCase().replaceAll(' ', '-')}" class='${tagActive ? "active-tag":"inactive-tag" }' onclick="changeFilter(this)">${tag}</button>`;
         }else{
             if(tagActive){
-                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("inactive-tag")
-                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.add("active-tag")
+                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.replace("inactive-tag", "active-tag")
             }else{
-                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("active-tag")
-                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.add("inactive-tag")
+                tagContainer.querySelector(`button[name='tag-${tag.toLowerCase().replaceAll(' ', '-')}']`).classList.replace("active-tag", "inactive-tag")
             }
         }
     }
@@ -158,103 +141,78 @@ function FindUrls(item){
     var urlContainer = document.getElementById(`ID${item["id"]}_item`).getElementsByClassName("data")[0].getElementsByClassName("see-more")[0];
     for (var linkID in item["links"]) {
         var link = item["links"][linkID];
-        var url = link["url"];
-        var source = link["source"];
-        urlContainer.innerHTML += `<button class="normal-tag" onclick="go('${url}')">${source}</button>`;
+        urlContainer.innerHTML += `<button class="normal-tag" onclick="go('${link["url"]}')">${link["source"]}</button>`;
     }
 }
 function changeFilter(button) {
     if(button.getAttribute("class") === "active-account-tag"){
-        button.classList.remove("active-account-tag");
-        button.classList.add("inactive-account-tag");
-        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.add("inactive-account-tag");
-        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("active-account-tag");
+        button.classList.replace("active-account-tag", "inactive-account-tag");
+        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.replace("inactive-account-tag", "active-account-tag");
         if(button.getAttribute("name") === "account-tag-favoritos") { search_favorites = false; }
         if(button.getAttribute("name") === "account-tag-por-ver") { search_toSee = false; }
         if(button.getAttribute("name") === "account-tag-viendo") { search_seeing = false; }
         if(button.getAttribute("name") === "account-tag-visto") { search_seen = false; }
     }else if(button.getAttribute("class") === "inactive-account-tag"){
-        button.classList.remove("inactive-account-tag");
-        button.classList.add("active-account-tag");
-        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.add("active-account-tag");
-        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("inactive-account-tag");
+        button.classList.replace("inactive-account-tag", "active-account-tag");
+        document.getElementById("searchTags").querySelector(`button[name='account-tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.replace("inactive-account-tag", "active-account-tag");
         if(button.getAttribute("name") === "account-tag-favoritos") { search_favorites = true; }
         if(button.getAttribute("name") === "account-tag-por-ver") { 
             search_toSee = true; 
             search_seen = false;
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-visto']`).classList.remove("active-account-tag");    
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-visto']`).classList.add("inactive-account-tag");
             search_seeing = false;
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-viendo']`).classList.remove("active-account-tag");    
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-viendo']`).classList.add("inactive-account-tag");
+            document.getElementById("searchTags").querySelector(`button[name='account-tag-visto']`).classList.replace("active-account-tag", "inactive-account-tag");
+            document.getElementById("searchTags").querySelector(`button[name='account-tag-viendo']`).classList.replace("active-account-tag", "inactive-account-tag");
         }
         if(button.getAttribute("name") === "account-tag-viendo") {
             search_toSee = false;
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-por-ver']`).classList.remove("active-account-tag");    
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-por-ver']`).classList.add("inactive-account-tag");
             search_seen = false;
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-visto']`).classList.remove("active-account-tag");    
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-visto']`).classList.add("inactive-account-tag");
             search_seeing = true;
+            document.getElementById("searchTags").querySelector(`button[name='account-tag-por-ver']`).classList.replace("active-account-tag", "inactive-account-tag");
+            document.getElementById("searchTags").querySelector(`button[name='account-tag-visto']`).classList.replace("active-account-tag", "inactive-account-tag");
         }
         if(button.getAttribute("name") === "account-tag-visto") {
             search_toSee = false;
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-por-ver']`).classList.remove("active-account-tag");    
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-por-ver']`).classList.add("inactive-account-tag");
             search_seen = true;
             search_seeing = false;
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-viendo']`).classList.remove("active-account-tag");    
-            document.getElementById("searchTags").querySelector(`button[name='account-tag-viendo']`).classList.add("inactive-account-tag");
+            document.getElementById("searchTags").querySelector(`button[name='account-tag-por-ver']`).classList.replace("active-account-tag", "inactive-account-tag");
+            document.getElementById("searchTags").querySelector(`button[name='account-tag-viendo']`).classList.replace("active-account-tag", "inactive-account-tag");
         }
     }else if(button.getAttribute("class") === "tag-mode-all"){
-        button.classList.remove("tag-mode-all");
-        button.classList.add("tag-mode-some");
+        button.classList.replace("tag-mode-all", "tag-mode-some");
         button.innerText = "Modo limitado";
         search_tag_mode = "some";
     }else if(button.getAttribute("class") === "tag-mode-some"){
-        button.classList.remove("tag-mode-some");
-        button.classList.add("tag-mode-all");
+        button.classList.replace("tag-mode-some", "tag-mode-all");
         button.innerText = "Modo completo";
         search_tag_mode = "all";
     }else if(button.getAttribute("class") === "active-tag"){
-        button.classList.remove("active-tag");
-        button.classList.add("inactive-tag");
-        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("active-tag");
-        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.add("inactive-tag");
+        button.classList.replace("active-tag", "inactive-tag");
+        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.replace("active-tag", "inactive-tag");
         search_tags.splice(search_tags.indexOf(button.getAttribute("name")),1);
     }else if(button.getAttribute("class") === "inactive-tag"){
         button.classList.remove("inactive-tag");
         button.classList.add("active-tag");
-        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.remove("inactive-tag");
-        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.add("active-tag");
+        document.getElementById("searchTags").querySelector(`button[name='tag-${button.innerText.toLowerCase().replaceAll(' ', '-')}']`).classList.replace("inactive-tag", "active-tag");
         search_tags.push(button.getAttribute("name"));
     }else if(button.getAttribute("class") === "active-type"){
         button.classList.remove("active-type");
         button.classList.add("inactive-type");
-        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.remove("active-type");
-        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.add("inactive-type");
+        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.replace("active-type", "inactive-type");
         search_type.splice(search_type.indexOf(button.getAttribute("name")),1);
     }else if(button.getAttribute("class") === "inactive-type"){
         button.classList.remove("inactive-type");
         button.classList.add("active-type");
-        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.remove("inactive-type");
-        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.add("active-type");
+        document.getElementById("searchTags").querySelector(`button[name='type-${button.innerText.toLowerCase()}']`).classList.replace("inactive-type", "active-type");
         search_type.push(button.getAttribute("name"));
     }
     var showAds = false;
-    if(
-        search_tags.length === 0 && 
-        search_type.length === 0 && 
-        !search_favorites &&
-        !search_toSee &&
-        !search_seeing &&
-        !search_seen
-        ){
+    if(search_tags.length === 0 && search_type.length === 0 && !search_favorites && !search_toSee && !search_seeing && !search_seen){
         showAds = true;
     }
     FindByName(document.getElementById("searchByName").value, showAds)
 }
-function FindByName(name, showAds){
+async function FindByName(name, showAds){
+    var container = document.getElementById("container");
     document.getElementById(`searchByName`).value = name;
     name = name.toLowerCase().split(" ").filter(function(segment) {return segment !== "";}).join(" ");
     if(name === '' && showAds){
@@ -315,19 +273,17 @@ function FindByName(name, showAds){
                                     <button class="${favoriteClass}" onclick='${favoriteFunction}'></button>
                                 </p>
                                 <div class="tags"><p>Tags: </p></div>
-                                <!--<p class="itemSubTitle">Alternative Titles</p>-->
-                                <!--<div class="alternativeTitles"></div>-->
                                 <p class="itemSubTitle">Sources</p>
                                 <div class="see-more"></div>
                             </div>
                         </div>
                     `;
                     if(!document.getElementById(`ID${item["id"]}_item`)){
-                        document.getElementById("container").innerHTML += div;
+                        container.innerHTML += div;
                         FindUrls(item);
                         FindTags(item);
-                        if(random(0, 100) <= 1){
-                            document.getElementById("container").innerHTML += `
+                        if(random(100) <= 1){
+                            container.innerHTML += `
                                 <div class="item ads">
                                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7427566752180603" crossorigin="anonymous"></script>
                                     <!-- item -->
@@ -341,6 +297,7 @@ function FindByName(name, showAds){
                                 </div>
                             `;
                         }
+                        await new Promise(resolve => setTimeout(resolve, 10));
                         break;
                     }else{
                         FindTags(item);
@@ -354,12 +311,12 @@ function FindByName(name, showAds){
         }
     }
 
-    for (var adsID in document.getElementById("container").getElementsByClassName('ads')){
-        if(adsID < document.getElementById("container").getElementsByClassName('ads').length){
+    for (var adsID in container.getElementsByClassName('ads')){
+        if(adsID < container.getElementsByClassName('ads').length){
             if(showAds){
-                document.getElementById("container").getElementsByClassName('ads')[adsID].removeAttribute("style");
+                container.getElementsByClassName('ads')[adsID].removeAttribute("style");
             }else{
-                document.getElementById("container").getElementsByClassName('ads')[adsID].style.display = 'none';
+                container.getElementsByClassName('ads')[adsID].style.display = 'none';
             }
         }
     }
@@ -369,8 +326,7 @@ function addToSee(id){
     window.localStorage.setItem("userToSee", JSON.stringify(userToSee))
     var element = document.getElementById(`ID${id}_item`).getElementsByClassName("data")[0].getElementsByClassName("itemTitle")[0]
     element.getElementsByClassName("un-see")[0].setAttribute("onclick", `addSeeing(${id})`);
-    element.getElementsByClassName("un-see")[0].classList.add("to-see");
-    element.getElementsByClassName("un-see")[0].classList.remove("un-see");
+    element.getElementsByClassName("un-see")[0].classList.replace("un-see", "to-see");
     
 }
 function addSeeing(id){
@@ -383,7 +339,7 @@ function addSeeing(id){
     element.getElementsByClassName("to-see")[0].classList.add("seeing");
     element.getElementsByClassName("to-see")[0].classList.remove("to-see");
     if(search_toSee){
-        document.getElementById(`ID${id}_item`).remove();
+        document.getElementById(`ID${id}_item`).style.display = "none";
     }
 }
 function addSeen(id){
@@ -396,7 +352,7 @@ function addSeen(id){
     element.getElementsByClassName("seeing")[0].classList.add("seen");
     element.getElementsByClassName("seeing")[0].classList.remove("seeing");
     if(search_seeing){
-        document.getElementById(`ID${id}_item`).remove();
+        document.getElementById(`ID${id}_item`).style.display = "none";
     }
 }
 function removeSeen(id){
@@ -407,7 +363,7 @@ function removeSeen(id){
     element.getElementsByClassName("seen")[0].classList.add("un-see");
     element.getElementsByClassName("seen")[0].classList.remove("seen");
     if(search_seen){
-        document.getElementById(`ID${id}_item`).remove();
+        document.getElementById(`ID${id}_item`).style.display = "none";
     }
 }
 function showImage(src){
